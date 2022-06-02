@@ -4,6 +4,10 @@
   }
   html, body {
     background: url(../images/bg.png) no-repeat center fixed;
+             -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
     width: 100%;
   }
   .nav-link{
