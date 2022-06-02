@@ -13,7 +13,7 @@
   html, body {
     background: url(../images/bg.png) no-repeat center fixed;
     width: 100%;
-    background-attachment:scroll;
+    background-attachment:fixed;
   }
   @media (max-width: 576px) {.nav-link{
     font-size: 42px;
