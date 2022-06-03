@@ -55,22 +55,22 @@ p:hover{
     width:75%;
   }
   p {
-    font-size: 60px;
+    font-size: 90px;
   }
   .text1 {
-    top: 25%;
+    top: 20%;
     left: 25%;
   }
   .text2 {
-    top: 25%;
+    top: 20%;
     left: 75%;
   }
   .text3 {
-    top: 75%;
+    top: 80%;
     left: 25%;
   }
   .text4 {
-    top: 75%;
+    top: 80%;
     left: 75%;
   }
 }
