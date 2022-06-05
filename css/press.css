@@ -3,7 +3,7 @@
     src: url(../images/Velvet\ Heart\ Font.ttf);
   }
   html, body {
-    background: url(../images/bg.png) no-repeat center fixed;
+    background: url(../images/bg.jpg) no-repeat center fixed;
     width: 100%;
   }
   .nav-link{

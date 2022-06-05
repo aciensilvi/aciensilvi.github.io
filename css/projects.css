@@ -11,7 +11,7 @@
     src: url(../fonts/Primen-Regular.otf);
   }
   html, body {
-    background: url(../images/bg.png) no-repeat center fixed;
+    background: url(../images/bg.jpg) no-repeat center fixed;
        -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -146,12 +146,14 @@
     
   }
   .projName {
-    font-family: Segun;
-    font-size: 35px;
+    font-family: VelvetHeart;
+    font-size: 80px;
+    line-height: 0.6;
   }
   .projDate{
-    font-family: Primen;
-    font-size: 35px;
+    font-family: VelvetHeart;
+    font-size: 60px;
+    line-height: 0.6;
   }
   a.projectLink{
     color:white;
