@@ -122,3 +122,18 @@ text-shadow:
      width: 350
     }
   }
+  .card {
+    background:local;
+    border: none;
+    display: inline-block;
+}
+.card .img-top {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.card:hover .img-top {
+    display: inline;
+}
