@@ -149,12 +149,18 @@
     font-family: VelvetHeart;
     font-size: 80px;
     line-height: 0.6;
-  }
+  }  @media (max-width: 576px) {.projName{
+    font-size: 40px;
+    line-height: 0.5;
+  }}
   .projDate{
     font-family: VelvetHeart;
     font-size: 60px;
     line-height: 0.6;
-  }
+  }  @media (max-width: 576px) {.projDate{
+    font-size: 40px;
+    line-height: 0.3;
+  }}
   a.projectLink{
     color:white;
     text-decoration: none;
@@ -163,5 +169,62 @@
      1px -1px 0 #ff00e2,
      -1px 1px 0 #ff00e2,
       1px 1px 0 #ff00e2;
+      cursor: pointer;
   }
   a.projectLink:hover{color:black}
+  p.white-purple {
+    font-family: VelvetHeart;
+    font-size: 60px;
+    color: white;
+    text-shadow:
+    -1px -1px 0 #ff00e2,  
+     1px -1px 0 #ff00e2,
+     -1px 1px 0 #ff00e2,
+      1px 1px 0 #ff00e2;
+      line-height: .7;
+  }
+  p.black-purple {
+    font-family: VelvetHeart;
+    font-size: 60px;
+    color: black;
+    text-shadow:
+    -1px -1px 0 #ff00e2,  
+     1px -1px 0 #ff00e2,
+     -1px 1px 0 #ff00e2,
+      1px 1px 0 #ff00e2;
+      line-height: .7;
+  }
+  .fit_width_25 {
+    width: 25% !important;
+    height: auto !important;
+  }
+  p.black {
+    font-family: VelvetHeart;
+    font-size: 60px;
+    color: black;
+  }
+  .modal-title {
+    font-family: VelvetHeart;
+    font-size: 80px;
+    color: black;
+    line-height: 0.4;
+  }
+
+  .btn-dark {
+    font-family: VelvetHeart;
+    font-size: 60px;
+    line-height: 0.6;
+  }
+  .zoomIn2 {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+  .zoomIn2:hover {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  i.black {
+    color: black;
+  }
