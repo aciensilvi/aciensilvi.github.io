@@ -1,0 +1,108 @@
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 101; /* Sit on top */
+    right: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    line-height: 1;
+    position: relative;
+    top: 15%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    text-transform: uppercase;
+    font-family: Century Gothic;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 85px;
+    font-weight: bold;
+    color: white;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+    text-shadow:
+    -1px -1px 0 #f1e5fb,  
+     1px -1px 0 #f1e5fb,
+     -1px 1px 0 #f1e5fb,
+      1px 1px 0 #f1e5fb;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: black;
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 0px;
+    right: 25px;
+    font-size: 120px;
+  }
+
+    
+  /* Position the close button (top right corner) */
+  .overlay .backbtn {
+    position: absolute;
+    top: 0px;
+    left: 25px;
+    font-size: 120px;
+  }
+  
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  @media screen and (max-width: 600px) {
+    .overlay a {
+      font-size: 36px;
+      padding: 8px;
+    }
+    .overlay .closebtn {
+      font-size: 66px;
+      top: 15px;
+      right: 15px;
+    }
+  }
+  .fas {
+    font-size: 30px;
+  }
+  .brand-centered {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0.75rem;
+    top: 5px;
+  }
+  .dropdown-item {
+    font-family: Century Gothic;
+    color: black;
+    font-weight: bold;
+       font-size: 15px;
+    letter-spacing: 0.75px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .dropdown-item:hover {
+    color: white;
+  }
+  .dropdown-menu {
+    background-color: #f1e5fb;
+    border-color: #39A0ED;
+    letter-spacing: 3px;
+  }
+  #myNav2 .overlay-content a{
+    font-size: 30px;
+  }

@@ -6,7 +6,7 @@ html {
   min-width: 100%;
   }
   body{
-    background: url(../images/bg.jpg) no-repeat center fixed;
+    background-color: white;
   }
 .logo {
     width: 40%;

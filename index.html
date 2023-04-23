@@ -1,26 +1,12 @@
 <html>
 <head>
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/homepage.css">
-    <title>Acien</title>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0M4GEK1QY7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-0M4GEK1QY7');
-</script>
+<app-head></app-head>
 </head>
 <body>
-<img class="logo" title="acien" alt="Acien Logo" src="images/logo.png">
-<a href="contact"><p class="text1">Contact</p></a>
-<a href="projects"><p class="text2">Projects</p></a>
-<a href="about"><p class="text3">About</p></a>
-<a href="press"><p class="text4">Press</p></a>
+  <app-navbar></app-navbar>
+<video src="documents/homepage.mp4" class="video-style" muted autoplay loop></video>
+<img class="homepageLogo" title="acien" alt="Acien Logo" src="images/logo.png">
+<app-footer></app-footer>
 </body>
-
-
+<script type="text/javascript" src="js/main.js"></script>
 </html>

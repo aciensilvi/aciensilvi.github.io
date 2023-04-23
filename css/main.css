@@ -1,102 +1,419 @@
+@import "menu-overlay.css";
 @font-face {
-    font-family: VelvetHeart;
-    src: url(../images/Velvet\ Heart\ Font.ttf);
+    font-family: Century Gothic;
+    src: url(../fonts/GOTHIC.TTF);
   }
   html, body {
-    background: url(../images/bg.jpg) no-repeat center fixed;
+    background-color: white;
              -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
     width: 100%;
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
   }
+
   .nav-link{
-      font-family: VelvetHeart;
-      word-spacing: 100px;
-    color: white;
-      text-shadow:
-       -1px -1px 0 #ff00e2,  
-        1px -1px 0 #ff00e2,
-        -1px 1px 0 #ff00e2,
-         1px 1px 0 #ff00e2;
-         font-size: 38px;
+    font-family: Century Gothic;
+    color: black;
+    font-weight: bold;
+       font-size: 15px;
+         text-transform: uppercase;
+    letter-spacing: 0.75px;
+         margin-right: 10px;
+         text-shadow:
+         -1px -1px 0 #f1e5fb,  
+          1px -1px 0 #f1e5fb,
+          -1px 1px 0 #f1e5fb,
+           1px 1px 0 #f1e5fb;
   }
-  .nav-link:hover{color: black;}
-/* The Overlay (background) */
-.overlay {
-    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
-    height: 100%;
-    width: 0;
-    position: fixed; /* Stay in place */
-    z-index: 100; /* Sit on top */
-    right: 0;
-    top: 0;
-    background-color: rgb(0,0,0); /* Black fallback color */
-    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
-  }
-  
-  /* Position the content inside the overlay */
-  .overlay-content {
-    z-index: 100;
-    position: relative;
-    top: 25%; /* 25% from the top */
-    width: 100%; /* 100% width */
-    text-align: center; /* Centered text/links */
-    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
-  }
-  
-  /* The navigation links inside the overlay */
-  .overlay a {
-    font-family: VelvetHeart;
-    padding: 8px;
-    text-decoration: none;
-    font-size: 85px;
-    color: #818181;
-    display: block; /* Display block instead of inline */
-    transition: 0.3s; /* Transition effects on hover (color) */
-  }
-  
-  /* When you mouse over the navigation links, change their color */
-  .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
-  }
-  
-  /* Position the close button (top right corner) */
-  .overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 120px;
-  }
-  
-  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-  @media screen and (max-height: 450px) {
-    .overlay a {font-size: 36px}
-    .overlay .closebtn {
-      font-size: 56px;
-      top: 5px;
-      right: 35px;
-    }
-  }
-  .brand-centered {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-  }
+  .nav-link:hover{color: white;}
   .navbar-brand {
+    position: absolute;
+    margin-left: 0.75rem;
     display: flex;
     align-items: center;
   }
-  .fas {
-    font-size: 30px;
+  @font-face {
+    font-family: Segun;
+    src: url(../fonts/Segun-Regular.ttf);
+  }
+  @font-face {
+    font-family: Primen;
+    src: url(../fonts/Primen-Regular.otf);
+  }
+  .footerIcon{
+       font-size: 38px;
+  }
+  .footerIcon:hover{
+    color: white;
+    text-shadow:
+    -0.5px -0.5px 0 black,  
+    0.5px -0.5px 0  black,
+    -0.5px 0.5px 0  black,
+     0.5px 0.5px 0  black;
+  }
+  .zoomIn {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+  .zoomIn:hover {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    
+  }
+  .projName {
+    font-family: VelvetHeart;
+    font-size: 80px;
+    line-height: 0.6;
+  }  @media (max-width: 576px) {.projName{
+    font-size: 40px;
+    line-height: 0.5;
+  }}
+  .projDate{
+    font-family: VelvetHeart;
+    font-size: 60px;
+    line-height: 0.6;
+  }  @media (max-width: 576px) {.projDate{
+    font-size: 40px;
+    line-height: 0.3;
+  }}
+  a.projectLink{
+    text-decoration: none;
     text-shadow:
     -1px -1px 0 #ff00e2,  
      1px -1px 0 #ff00e2,
      -1px 1px 0 #ff00e2,
       1px 1px 0 #ff00e2;
+      cursor: pointer;
   }
+  a.projectLink:hover{color:black}
+  p.white-purple {
+    font-family: VelvetHeart;
+    font-size: 60px;
+    text-shadow:
+    -1px -1px 0 #ff00e2,  
+     1px -1px 0 #ff00e2,
+     -1px 1px 0 #ff00e2,
+      1px 1px 0 #ff00e2;
+      line-height: .7;
+  }
+  p.black-purple {
+    font-family: VelvetHeart;
+    font-size: 60px;
+    color: black;
+    text-shadow:
+    -1px -1px 0 #ff00e2,  
+     1px -1px 0 #ff00e2,
+     -1px 1px 0 #ff00e2,
+      1px 1px 0 #ff00e2;
+      line-height: .7;
+  }
+  .fit_width_25 {
+    width: 25% !important;
+    height: auto !important;
+  }
+  p.black {
+    font-family: VelvetHeart;
+    font-size: 60px;
+    color: black;
+  }
+  .modal-title {
+    font-family: VelvetHeart;
+    font-size: 80px;
+    color: black;
+    line-height: 0.4;
+  }
+
+  .btn-dark {
+    font-family: VelvetHeart;
+    font-size: 60px;
+    line-height: 0.6;
+  }
+  .zoomIn2 {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+  .zoomIn2:hover {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  i.black {
+    color: black;
+  }
+  .resp-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 100%;
+    height: 100% !important;
+}
+.resp-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.bg-tr {
+    font-size: 20px;
+    font-family: Century Gothic !important;
+}
+  .title {
+font-weight:normal;
+color: #fff;
+font-size: 7rem;
+font-family: 'VelvetHeart', VelvetHeart, serif; 
+text-shadow:
+-1px -1px 0 #6912b9,  
+ 1px -1px 0 #6912b9,
+ -1px 1px 0 #6912b9,
+  1px 1px 0 #6912b9;
+  }
+  .fit_width {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .white-bg-1 {
+    background: rgba(116, 0, 220, 0.1);
+  }
+  @font-face {
+    font-family: Segun;
+    src: url(../fonts/Segun-Regular.ttf);
+  }
+  h1,h2,h3{
+    font-family: Segun;
+  }
+  h1{
+    line-height: 100px;
+    font-size:100px;
+  }
+  h3{
+    font-size:50px;
+  }
+  h3.gradient span {
+    background: linear-gradient(0deg, rgba(255,0,255,0) 0%, rgba(255,0,255,0) 16%, #f1e5fb 16%, #f1e5fb  41%, rgba(255,0,255,0) 41%);
+  } 
+  
+  h3.padding span {
+    padding: 0 0.5em 0 0.1em;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  a.contact{
+    font-family: Century Gothic;
+    font-size:25px;
+    color:black;
+    text-decoration: none;
+    text-shadow:
+    -0.5px -0.5px 0 black,  
+    0.5px -0.5px 0  black,
+    -0.5px 0.5px 0  black,
+     0.5px 0.5px 0  black;
+  }
+  a.contact:hover{
+    color:white;
+  }
+  .magazine_logo{
+    width: 393;
+  }
+  .magazine_:hover {
+    background-color:#fff;
+    opacity:0.5;
+    border-radius:30px;
+}
+  @media (max-width: 576px) {
+    .magazine_logo{
+      width: 230;
+      text-align: center!important;
+    }
+  }
+  .pic_w50{
+    width: 50%!important;
+  }
+  @media (max-width: 450px) {
+    .pic_w50{
+     width: 100%!important;
+    }
+  }
+
+  .carousel-control-next,
+.carousel-control-prev /*, .carousel-indicators */ {
+    filter: invert(100%);    
+}
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  width: 7rem;
+  height: 7rem;
+}
+
+  .form{
+    width:640
+  }
+  @media (max-width: 750px) {
+    .form{
+     width: 350
+    }
+  }
+  .card {
+    background:local;
+    border: none;
+    display: inline-block;
+}
+.card .img-top {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.card:hover .img-top {
+    display: inline;
+}
+.current {
+  color: #7400DC !important;
+  pointer-events: none;
+}
+.page-name {
+  font-family: Century Gothic;
+  color: black;
+  font-weight: bold;
+     font-size: 15px;
+       text-transform: uppercase;
+       padding-left: 52.5px;
+  letter-spacing: 0.75px;
+       text-shadow:
+       -1px -1px 0 #f1e5fb,  
+        1px -1px 0 #f1e5fb,
+        -1px 1px 0 #f1e5fb,
+         1px 1px 0 #f1e5fb;
+}
+
+#background-video {
+  /* width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1; */
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  /* opacity: 0.5; */
+  z-index: -1;
+}
+.projectName{
+  /* font-family: Century Gothic; */
+  text-transform: uppercase;
+}
+@media (max-width:991.2px){
+  .projectName{
+    display: none;
+  }
+}
+.behind{
+  background: rgba(116, 0, 220, 0.1);
+  transform: scale(0.95);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+.projectPic {
+  width: 100%;
+  height: 100%;
+  transition: .7s;
+  object-fit: cover; 
+}
+.projectPic:hover {
+  opacity: 0.6; 
+}
+.projectVid{
+  width: 80%;
+}
+.homepageLogo{
+  width: 20%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+.pdf{
+  width: 60%;
+  height: 600px;
+}
+li{
+  font-family: Century Gothic;
+  font-size: 17px;
+}
+.blockquote-left{
+  border-left: 3px solid black;
+  padding-left: 30px; 
+  margin-left: 80px;
+}
+.blockquote-right{
+  border-left: 3px solid black;
+  padding-left: 30px; 
+  margin-right: 80px;
+}
+.coming-soon{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+.youtube-video {
+  aspect-ratio: 16 / 9;
+  width: 80%;
+}
+
+.fit_width_50 {
+  width: 50% !important;
+  height: auto !important;
+}
+
+.video-style{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 991.2px) {
+  .behind{
+    height: 100%;
+    width: 100%;
+  }
+  .projectPic:hover{
+    opacity : 1;
+  }
+  .projectVid{
+  width: 100%;
+}
+.pdf{
+  width: 100%;
+}
+.blockquote-left{
+  margin-left: 0px;
+}
+.blockquote-right{
+  margin-right: 0;
+}
+.homepageLogo{
+  width: 55%;
+}
+}

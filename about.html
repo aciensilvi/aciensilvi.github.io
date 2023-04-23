@@ -1,78 +1,49 @@
 <html>
 <head>
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-  <title>About - Acien</title>
-  <!-- fontawesome-->
-  <script src="https://kit.fontawesome.com/581d00b336.js" crossorigin="anonymous"></script>
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="css/main.css">
-<link rel="stylesheet" type="text/css" href="css/about.css">
-<script type="text/javascript" src="js/main.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0M4GEK1QY7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-0M4GEK1QY7');
-</script>
+<app-head></app-head>
 </head>
 <body>
-<!-- add an alert if you are on mozilla, it will look very weird for you, switch browser for your own good -->
-<!-- add alert rotate if rotated screen on phone ; if height is very low -->
-          <nav class="navbar navbar-expand-xl py-0 sticky-top white-bg-1">
-            <a class="navbar-brand d-xl-none" href="/"><img src="images/logo.png" style="max-height:70px;"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <!-- The overlay -->
-    <div id="myNav" class="overlay">
-      <!-- Button to close the overlay navigation -->
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <!-- Overlay content -->
-      <div class="overlay-content">
-        <a href="/">Home</a>
-        <a href="projects">Projects</a>
-        <a href="contact">Contact</a>
-        <a href="about">About</a>
-        <a href="press">Press</a>
-      </div>
-    </div>
-    <!-- Use any element to open/show the overlay navigation menu -->
-    <span onclick="openNav()" style="font-size: 25px;"><i class="fas fa-bars"></i></span>
-            </button>
-        <div class="collapse navbar-collapse" id="myNavbarToggler7">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="projects">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact">Contact</a>
-                </li>
-                <a class="d-none d-lg-block" href="/"><img src="images/logo.png" style="max-height:70px;"></a>
-                <li class="nav-item">
-                  <a class="nav-link" href="about">About</a>
-              </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="press">Press</a>
-                </li>
-            </ul>
-          </nav>
+<app-navbar></app-navbar>
           <div class="container">
-            <p class="title text-center">About</p>
+            <br>
             <div class="row">
-            <div class="col-12-push col-xl-6">
-              <img src="images/about.png" class="fit_width">
+            <div class="col-12-push col-lg-6 px-0">
+              <img src="images/about-1-1.jpg" class="img-responsive fit_width">
             </div>
-            <div class="col-12-pull  order-first order-xl-last col-xl-6 rounded bg-tr text-justfy  ">
-              <h2 class="text-center">SILVIA</h2>
-              <h1 class="text-center">ACIEN</h1>
-              <br>
-              <h3  class="text-center gradient padding"><span>SPANISH DESIGNER</span></h3>
+            <div class="col-12-pull  order-first order-lg-last col-lg-6 rounded bg-tr text-justfy my-auto">
+              <blockquote class="blockquote-left">
+              <h3  class="text-center gradient padding "><span>VALUES</span></h3><br>
+              <p>The objective is to harmoniously merge traditional Andalusian methodologies with contemporary regenerative approaches, with the aim of preserving cultural roots and fostering innovation for a promising innovative future.</p>    
+              </blockquote> 
+          </div>
+          </div>
+          <div class="row">
+          <div class="col-12 col-lg-6 my-auto">
+            <br><blockquote class="blockquote-right">
+            <h3  class="text-center gradient padding"><span>MISSION</span></h3><br>
+          <ul>
+            <li>Push the boundaries of knitwear by creating garments that not only make a statement in preserving tradition and encourage innovation, but also drive positive social, ecological, and cultural impact.
+            </li>
+            <li>Meeting the challenges of our times to stop climate change through responsible knitwear garments.
+            </li>
+            <li>Envisioning a future where fashion is regenerative through cutting-edge technology and advanced design techniques.
+            </li>
+            <li>Set a new standard in the knitwear industry.</li>
+          </ul>
+          </blockquote> 
+          </div>
+        <div class="col-12 col-lg-6 px-0">
+          <img src="images/about-2-2.jpg"
+          class="img-responsive fit_width">
+          </div>
+          </div>
+          <div class="row">
+            <div class="col-12-push col-lg-6 px-0">
+              <img src="images/about-3.jpeg" class="fit_width">
+            </div>
+            <div class="col-12-pull  order-first order-lg-last col-lg-6 rounded bg-tr text-justfy  ">
+              <br><blockquote class="blockquote-left">
+              <h3  class="text-center gradient padding"><span>FOUNDER</span></h3><br>
             <p>
               Silvia Acien is a Spanish Andalusian designer currently studying at Central Saint Martins BA Knitwear course.
 </p>
@@ -87,24 +58,12 @@ After interning at Vivienne Westwood, Charles Jeffrey Loverboy and Maison/0 x LV
 </p>
 </p>
 <p>
-  During her degree, Acien had the chance of being featured in magazines such as Office, FG*K, Malvie, Hunter and Sicky. She also took part in several Fund-raising catwalks, and won the Central Saint Martins Nike project.</p>    
+  During her degree, Acien had the chance of being featured in magazines such as Office, FG*K, Malvie, Hunter and Sicky. She also took part in several Fund-raising catwalks, and won the Central Saint Martins Nike project.</p></blockquote>    
             </div>
-          </div>
           </div>
 </div>
 <br>
-<footer class="text-center text-white white-bg-1">
-  <!-- Grid container -->
-  <div class="container pt-2">
-    <!-- Section: Social media -->
-      <!-- Mail -->
-      <a href="mailto:info@acien.es"><i class="btn fa-solid fa-envelope fa-lg footerIcon"></i></a>
-      <!-- Instagram -->
-      <a href="https://instagram.com/aciensilvi" target="blank"><i class="btn fa-brands fa-instagram fa-lg footerIcon"></i></a>
-      <!-- Linkedin -->
-      <a href="https://www.linkedin.com/in/silvia-acien-parrilla-3a0296216" target="blank"><i class="btn fa-brands fa-linkedin fa-lg footerIcon"></i></a>
-    <!-- Section: Social media -->
-  </div>
-</footer>
+<app-footer></app-footer>
 </body>
+<script type="text/javascript" src="js/main.js"></script>
 </html>
