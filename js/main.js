@@ -4,7 +4,7 @@ document.onreadystatechange = function() {
     var loader = document.createElement('img');
     loader.id = 'loaderForSite'
     loader.classList = 'spinner-border';
-    loader.src = 'https://acien.es/images/logo.png'
+    loader.src = 'https://acien.es/favicon.ico'
     loader.style = `
     position: absolute;
     top: 0;
@@ -442,3 +442,32 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
 gtag('config', 'G-0M4GEK1QY7');
+
+// For lazy video
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(video) {
+        if (video.isIntersecting) {
+          for (var source in video.target.children) {
+            var videoSource = video.target.children[source];
+            if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+              videoSource.src = videoSource.dataset.src;
+            }
+          }
+
+          video.target.load();
+          video.target.classList.remove("lazy");
+          lazyVideoObserver.unobserve(video.target);
+        }
+      });
+    });
+
+    lazyVideos.forEach(function(lazyVideo) {
+      lazyVideoObserver.observe(lazyVideo);
+    });
+  }
+});
