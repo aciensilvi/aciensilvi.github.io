@@ -19,7 +19,7 @@ document.onreadystatechange = function() {
       document.querySelector("body").style.visibility = "hidden";
   } else {
       document.querySelector("body").style.visibility = "visible";
-      document.querySelector("loaderForSite").style.visibility = "hidden";
+      document.querySelector("#loaderForSite").style.visibility = "hidden";
       document.getElementById("loaderForSite").remove();
   }
 };
@@ -434,3 +434,11 @@ customElements.define('app-magazine', Magazine);
 customElements.define('app-project', Project);
 customElements.define('app-footer', Footer);
 customElements.define('app-navbar', Navbar);
+
+
+// Google tag
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-0M4GEK1QY7');
