@@ -44,6 +44,9 @@
     font-family: Primen;
     src: url(../fonts/Primen-Regular.otf);
   }
+  .fixed-bottom {
+    z-index: 1000;
+  }
   .footerIcon{
        font-size: 38px;
   }
