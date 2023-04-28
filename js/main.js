@@ -442,3 +442,8 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
 gtag('config', 'G-0M4GEK1QY7');
+
+// Load video 
+var video = document.getElementById('video');
+video.load();
+video.play();
