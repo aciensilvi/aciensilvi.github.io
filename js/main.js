@@ -1,9 +1,10 @@
 // Loader for the page
 document.onreadystatechange = function() {
   if (document.readyState !== "complete") {
-    var loader = document.createElement('loaderForSite');
+    var loader = document.createElement('img');
     loader.id = 'loaderForSite'
     loader.classList = 'spinner-border';
+    loader.src = 'https://acien.es/images/logo.png'
     loader.style = `
     position: absolute;
     top: 0;
@@ -11,9 +12,10 @@ document.onreadystatechange = function() {
     left: 0;
     right: 0;
     margin: auto;
+    animation: 1.75s linear infinite spinner-border;
     `;
     document.getElementsByTagName('body').item(0).appendChild(loader);
-    document.querySelector("loaderForSite").style.visibility = "visible";
+    document.querySelector("#loaderForSite").style.visibility = "visible";
       document.querySelector("body").style.visibility = "hidden";
   } else {
       document.querySelector("body").style.visibility = "visible";
