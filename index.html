@@ -1,15 +1,17 @@
 <html>
 <head>
 <app-head></app-head>
+<!-- Animation -->
+<link rel="stylesheet" href="css/animate.min.css"/>
 </head>
 <body>
 <app-navbar></app-navbar>
-<video playsinline="" loop="true" autoplay="autoplay" class="lazy video-style" muted="" preload="none" disablePictureInPicture="true" poster="/images/poster.png">
+<video playsinline="" loop="true" autoplay="autoplay" class="lazy video-style" muted="" preload="none" disablePictureInPicture="true" poster="images/poster.png">
   <source src="documents/homepage.mp4" type="video/mp4">
   <source src="documents/homepage.webm" type="video/webm">
   Your browser does not support the video tag.
 </video>
-<img class="homepageLogo" title="acien" alt="Acien Logo" src="images/logo.png">
+<img class="homepageLogo" id="homepageLogo" title="acien" alt="Acien Logo" src="images/logo.png">
 <app-footer></app-footer>
 </body>
 <script type="text/javascript" src="js/main.js"></script>
