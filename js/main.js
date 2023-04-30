@@ -492,8 +492,8 @@ new Promise((resolve, reject) => {
   node.addEventListener('animationend', handleAnimationEnd, {once: true});
 });
 
-document.getElementById("homepageLogo").addEventListener("click", animateElement);
-document.getElementById("homepageLogo").addEventListener("touchstart", animateElement);
+// document.getElementById("homepageLogo").addEventListener("click", animateElement);
+document.getElementById("homepageLogo").onclick = () => {animateElement()};
 
 function animateElement() {
 switch(Math.floor(Math.random() * 5)) {
