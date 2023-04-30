@@ -493,6 +493,7 @@ new Promise((resolve, reject) => {
 });
 
 document.getElementById("homepageLogo").addEventListener("click", animateElement);
+document.getElementById("homepageLogo").addEventListener("touchstart", animateElement);
 
 function animateElement() {
 switch(Math.floor(Math.random() * 5)) {
