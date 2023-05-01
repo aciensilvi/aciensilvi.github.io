@@ -494,6 +494,12 @@ new Promise((resolve, reject) => {
 
 // document.getElementById("homepageLogo").addEventListener("click", animateElement);
 // document.getElementById("homepageLogo").onclick = () => {animateHomepageLogo()};
+const eventBasedOnDevice = navigator.userAgent.match(/ipod|ipad|iphone/i) ? 'touchstart' : 'click';
+
+document.getElementById("homepageLogo").addEventListener(eventBasedOnDevice, function event(event) {
+ 
+  animateHomepageLogo(); //what you want to happen onclick
+});
 
 function animateHomepageLogo() {
 switch(Math.floor(Math.random() * 5)) {
