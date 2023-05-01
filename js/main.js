@@ -493,9 +493,9 @@ new Promise((resolve, reject) => {
 });
 
 // document.getElementById("homepageLogo").addEventListener("click", animateElement);
-document.getElementById("homepageLogo").onclick = () => {animateElement()};
+// document.getElementById("homepageLogo").onclick = () => {animateHomepageLogo()};
 
-function animateElement() {
+function animateHomepageLogo() {
 switch(Math.floor(Math.random() * 5)) {
   case 0 : animateCSS('.homepageLogo', 'flip'); break;
   case 1 : animateCSS('.homepageLogo', 'heartBeat'); break;
