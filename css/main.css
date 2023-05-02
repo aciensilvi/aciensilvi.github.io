@@ -352,6 +352,7 @@ text-shadow:
   left: 0;
   right: 0;
   bottom: 0;  
+  display:block;
 }
 .pdf{
   width: 60%;
