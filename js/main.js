@@ -1,3 +1,14 @@
+// Create a new script element
+var script = document.createElement('script');
+
+// Set the source of the script to the Stripe library URL
+script.src = 'https://js.stripe.com/v3/';
+
+// Add the script element to the document's head
+document.head.appendChild(script);
+
+var stripe = Stripe('pk_test_51N3NRnBOO9qFoNOFAfKzQgz2Wrmt5abl4geEQCATYVQM5HW7nWjxZLl56qsiTrLY4h8S5S16WunKinAQu0jbRCsx00jaeKMNdW');
+
 // Loader for the page
 document.onreadystatechange = function() {
   if (document.readyState !== "complete") {
