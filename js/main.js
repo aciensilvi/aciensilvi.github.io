@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function() {
   if (pageTitle.includes("maison")) {
     pageTitle = "maison/0 x lvmh"
   } else if (pageTitle.includes("index")) {
-    pageTitle = "home"
+    pageTitle = ""
   }
 
 class Navbar extends HTMLElement{
@@ -141,7 +141,7 @@ class Navbar extends HTMLElement{
 </div>
 </div>
 <!-- Use any element to open/show the overlay navigation menu -->
-<span onclick="openNav()" style="font-size: 25px;"><i class="fas fa-bars"></i></span>
+<span onclick="openNav()" style="font-size: 25px;"><i class="fas menuButton fa-bars"></i></span>
   </button>
 <div class="collapse navbar-collapse" id="myNavbarToggler7">
   <ul class="navbar-nav mx-auto">

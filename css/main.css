@@ -398,6 +398,14 @@ li{
   object-fit: cover;
 }
 
+i {
+  text-shadow:
+  -1px -1px 0 #f1e5fb,  
+   1px -1px 0 #f1e5fb,
+   -1px 1px 0 #f1e5fb,
+    1px 1px 0 #f1e5fb;
+}
+
 @media (max-width: 991.2px) {
   .behind{
     height: 100%;
