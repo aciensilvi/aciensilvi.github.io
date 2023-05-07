@@ -31,24 +31,14 @@ function loadScript(url) {
   document.head.appendChild(script);
 }
 
-
 // Add a variable for a page you are on
 var page = location.pathname.substring(
   location.pathname.lastIndexOf('/') + 1,
 );
-
-// 
+// Get rid of .html in the formatting if it is displayed
 if (page.includes(".html")) {
   page = page.replace(".html","");
 }
-
-let pageTitle = page.replace(/_/g, ' ');
-if (pageTitle.includes("maison")) {
-  pageTitle = "maison/0 x lvmh"
-} else if (pageTitle.includes("index")) {
-  pageTitle = ""
-}
-
 const projects = ['maison_0_x_lvmh', 'evasion', 'menigilda', 'caballo_andaluz','chelsea_fc_x_nike','soportujar','jaula_invisible','gallina_de_ciudad','overpopulated_world','la_veneno',"franco's_exhumation",'integrated_fight'];
 const magazines = ['fguk', 'hunter', 'malvie', 'office','sicky'];
 const homepage = ['','index'];
@@ -60,61 +50,36 @@ if (projects.indexOf(page) >= 0) {
   loadScript('./js/home.js');
 }
 
-// Lazy video 
-document.addEventListener("DOMContentLoaded", function() {
-  var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
-
-  if ("IntersectionObserver" in window) {
-    var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(video) {
-        if (video.isIntersecting) {
-          for (var source in video.target.children) {
-            var videoSource = video.target.children[source];
-            if (typeof videoSource.tagName === "string" && videoSource.tagName === "documents/homepage") {
-              videoSource.src = videoSource.dataset.src;
-            }
-          }
-
-          video.target.load();
-          video.target.classList.remove("lazy");
-          lazyVideoObserver.unobserve(video.target);
-        }
-      });
-    });
-
-    lazyVideos.forEach(function(lazyVideo) {
-      lazyVideoObserver.observe(lazyVideo);
-    });
-  }
-});
-
-
+// Menu actions
  /* Open when someone clicks on the span element */
   function openNav() {
     document.getElementById("myNav").style.width = "100%";
   }
-  
   /* Close when someone clicks on the "x" symbol inside the overlay */
   function closeNav() {
     document.getElementById("myNav").style.width = "0%";
   }
-
   /* Open when someone clicks on the openNav2 button */
   function openNav2() {
     document.getElementById("myNav2").style.width = "100%";
   }
-  
   /* Close when someone clicks on the "x" symbol inside the overlay 2 */
   function closeNav2() {
     document.getElementById("myNav2").style.width = "0%";
     document.getElementById("myNav").style.width = "0%";
   }
-
   /* Go back to menu 1*/
   function backToNav() {
     document.getElementById("myNav2").style.width = "0%";
   }
 
+// Change the title of the page
+let pageTitle = page.replace(/_/g, ' ');
+if (pageTitle.includes("maison")) {
+  pageTitle = "maison/0 x lvmh"
+} else if (pageTitle.includes("index")) {
+  pageTitle = ""
+}
 
 class Navbar extends HTMLElement{
   connectedCallback(){
@@ -332,7 +297,6 @@ class CommonHead extends HTMLElement{
 customElements.define('app-head', CommonHead);
 customElements.define('app-footer', Footer);
 customElements.define('app-navbar', Navbar);
-
 
 // Google tag
 window.dataLayer = window.dataLayer || [];
