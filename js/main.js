@@ -24,6 +24,41 @@ document.onreadystatechange = function() {
   }
 };
 
+// Load scripts from other js files
+function loadScript(url) {
+  const script = document.createElement('script');
+  script.src = url;
+  document.head.appendChild(script);
+}
+
+
+// Add a variable for a page you are on
+var page = location.pathname.substring(
+  location.pathname.lastIndexOf('/') + 1,
+);
+
+// 
+if (page.includes(".html")) {
+  page = page.replace(".html","");
+}
+
+let pageTitle = page.replace(/_/g, ' ');
+if (pageTitle.includes("maison")) {
+  pageTitle = "maison/0 x lvmh"
+} else if (pageTitle.includes("index")) {
+  pageTitle = ""
+}
+
+const projects = ['maison_0_x_lvmh', 'evasion', 'menigilda', 'caballo_andaluz','chelsea_fc_x_nike','soportujar','jaula_invisible','gallina_de_ciudad','overpopulated_world','la_veneno',"franco's_exhumation",'integrated_fight'];
+const magazines = ['fguk', 'hunter', 'malvie', 'office','sicky'];
+const homepage = ['','index'];
+if (projects.indexOf(page) >= 0) {
+  loadScript('./js/project.js');
+} else if (magazines.indexOf(page) >= 0) {
+  loadScript('./js/magazine.js');
+} else if (homepage.indexOf(page) >= 0) {
+  loadScript('./js/home.js');
+}
 
 // Lazy video 
 document.addEventListener("DOMContentLoaded", function() {
@@ -80,23 +115,6 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("myNav2").style.width = "0%";
   }
 
-
-// Add a variable for a page you are on
-  var page = location.pathname.substring(
-    location.pathname.lastIndexOf('/') + 1,
- );
-
- // 
-  if (page.includes(".html")) {
-    page = page.replace(".html","");
-  }
-  
-  let pageTitle = page.replace(/_/g, ' ');
-  if (pageTitle.includes("maison")) {
-    pageTitle = "maison/0 x lvmh"
-  } else if (pageTitle.includes("index")) {
-    pageTitle = ""
-  }
 
 class Navbar extends HTMLElement{
   connectedCallback(){
@@ -311,148 +329,7 @@ class CommonHead extends HTMLElement{
   }
 }
 
-class Magazine extends HTMLElement {
-
-  connectedCallback() {
-    
-    // Get the number for the loop
-    var imageCount = document.querySelector('app-magazine').getAttribute('count');
-    // Loop to put in
-    let carousel_inner = "";
-    // Loop itself
-    for ( let i = 1; i <= imageCount; i++) {
-      carousel_inner += `<div class="carousel-item">
-      <img src="images/magazines/` + page +`/${i}.jpg" class="d-block pic_w50 mx-auto" alt="Acien x FGUK">
-    </div>`;
-    } 
-    let carousel_indicators = "";
-    for (let i = 1; i <= imageCount; i++) {
-      carousel_indicators += `
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="${i-1}" aria-label="Slide ${i}"></button>
-      `
-    }
-    this.innerHTML = `
-    <div class="container-fluid" >
-            <div class="row justify-content-md-center">
-              <div class="col-md-6 text-center "><br>
-                        <img class="magazine_logo" src="images/magazines/`+ page +`.png">
-              </div>
-            </div><br>
-            <div class="row justify-content-md-center">
-              <div class="col-md-8 text-center ">
-              <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="carousel">
-              <div class="carousel-indicators ">`
-              + carousel_indicators +
-                  `</div>
-                <div class="carousel-inner ">`
-                + carousel_inner
-                +
-                  `
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-            </div>
-            </div>
-                </div>
-<br>
-    `
-    // Add active class to the first item in the list
-    document.querySelectorAll('.carousel-item').forEach(el => {
-      if (el.querySelector('img').getAttribute('src').includes('1')) {
-        el.classList.add('active');
-      }
-    });
-    // Add active class to the first item in the list
-    document.querySelectorAll('[data-bs-target="#carouselExampleIndicators"]').forEach(el => {
-      if (el.getAttribute('data-bs-slide-to').includes('0')) {
-        el.classList.add('active');
-        el.setAttribute('aria-current','true');
-      }
-    });
-  }
-  
-}
-
-class Project extends HTMLElement {
-
-  connectedCallback() {
-    let video ="";
-    let video_link = ""
-    switch (page) {
-      case 'gallina_de_ciudad': video_link = "https://www.youtube.com/embed/JUnRM_ItzFw"; break;
-      case 'jaula_invisible': video_link = "https://www.youtube.com/embed/IPb_FZDa8Ts"; break;
-      case 'soportujar': video_link = "https://www.youtube.com/embed/xDFKaaxGdT4"; break;
-      case 'caballo_andaluz': video_link = "https://www.youtube.com/embed/5Woob-3Yw50"; break;
-      case 'menigilda': video_link = "https://www.youtube.com/embed/iNy-ZrMnpzo"; break;
-      case 'evasion': video_link = "https://www.youtube.com/embed/9E8i_6O6_FU"; break;
-      default: video_link = "not present"; break;
-    }
-    if (['evasion', 'menigilda','caballo_andaluz','soportujar','jaula_invisible','gallina_de_ciudad'].indexOf(page) >= 0) {
-      video =
-      `<div class="container-fluid text-center">
-      <br>
-      <div class="row">
-        <div class="col">
-        <iframe class="youtube-video" src="` + video_link + `" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-      </div>
-      <br>
-    </div>
-      `
-    } else if (page=="maison_0_x_lvmh") {
-      video = 
-      `<div class="container-fluid text-center">
-      <br>
-      <div class="row">
-        <div class="col">
-      <object class="pdf" data="documents/rewilding-textiles-publication.pdf" type="application/pdf">
-      </div>
-      </div>
-      <br>
-    </div>
-      `
-    }
-    // Get the number for the loop
-    var imageCount = document.querySelector('app-project').getAttribute('count');
-    // Loop to put in
-    let projectImages = "";
-    // Loop itself
-    for ( let i = 1; i <= imageCount; i++) {
-      projectImages += `<div class="col-6 col-md-4 text-center"><a href="images/`+ page +`/${i}.jpg" data-fslightbox="gallery" data-type="image"><div class="behind"><img class="fit_w projectPic" src="images/`+ page +`/${i}.jpg"></div></a></div>`;
-    } 
-    this.innerHTML = `
-    <br>
-    <div class="container-fluid">
-      <h3 class="text-center projectName gradient"><span>` + pageTitle +`</span></h3>
-      <div class="row">` +
-      projectImages
-      + `</div>
-      <br>
-    </div>`
-    + video
-    function includeFSlightbox(file) {
-      var script = document.createElement('script');
-      script.src = file;
-      script.type = 'text/javascript';
-      script.crossorigin = "anonymous";
-  
-      var s = document.body.firstChild;
-      s.parentNode.insertBefore(script, s);
-      }
-      includeFSlightbox("js/fslightbox.js");
-      
-}
-}
 customElements.define('app-head', CommonHead);
-customElements.define('app-magazine', Magazine);
-customElements.define('app-project', Project);
 customElements.define('app-footer', Footer);
 customElements.define('app-navbar', Navbar);
 
@@ -463,43 +340,3 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
 gtag('config', 'G-0M4GEK1QY7');
-
-// Animate homepage logo
-const animateCSS = (element, animation, prefix = 'animate__') =>
-// We create a Promise and return it
-new Promise((resolve, reject) => {
-  const animationName = `${prefix}${animation}`;
-  const node = document.querySelector(element);
-
-  node.classList.add(`${prefix}animated`, animationName);
-  //node.classList.add(`${prefix}animated`, animationName).setProperty('--animate-duration', '2s');
-
-  // When the animation ends, we clean the classes and resolve the Promise
-  function handleAnimationEnd(event) {
-    event.stopPropagation();
-    node.classList.remove(`${prefix}animated`, animationName);
-    resolve('Animation ended');
-  }
-
-  node.addEventListener('animationend', handleAnimationEnd, {once: true});
-});
-// Normal click 
-// document.getElementById("homepageLogo").addEventListener("click", animateElement);
-// document.getElementById("homepageLogo").onclick = () => {animateHomepageLogo()};
-// Click that adapts depending on device (seems to work on most devices)
-const eventBasedOnDevice = navigator.userAgent.match(/ipod|ipad|iphone/i) ? 'touchstart' : 'click';
-
-document.getElementById("homepageLogo").addEventListener(eventBasedOnDevice, function event(event) {
- 
-  animateHomepageLogo(); //what you want to happen onclick
-});
-
-function animateHomepageLogo() {
-switch(Math.floor(Math.random() * 5)) {
-  case 0 : animateCSS('.homepageLogo', 'flip'); break;
-  case 1 : animateCSS('.homepageLogo', 'heartBeat'); break;
-  case 2 : animateCSS('.homepageLogo', 'hinge'); break;
-  case 3 : animateCSS('.homepageLogo', 'rubberBand'); break;
-  case 4 : animateCSS('.homepageLogo', 'tada'); break;
-}
-}
