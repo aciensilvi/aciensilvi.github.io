@@ -147,9 +147,6 @@
     -webkit-transform: scale(0.9);
     transform: scale(0.9);
   }
-  i.black {
-    color: black;
-  }
   .resp-container {
     position: relative;
     overflow: hidden;
@@ -399,6 +396,7 @@ li{
 }
 
 i {
+  color: black;
   text-shadow:
   -1px -1px 0 #f1e5fb,  
    1px -1px 0 #f1e5fb,
