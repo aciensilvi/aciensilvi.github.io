@@ -491,9 +491,10 @@ new Promise((resolve, reject) => {
 
   node.addEventListener('animationend', handleAnimationEnd, {once: true});
 });
-
+// Normal click 
 // document.getElementById("homepageLogo").addEventListener("click", animateElement);
 // document.getElementById("homepageLogo").onclick = () => {animateHomepageLogo()};
+// Click that adapts depending on device (seems to work on most devices)
 const eventBasedOnDevice = navigator.userAgent.match(/ipod|ipad|iphone/i) ? 'touchstart' : 'click';
 
 document.getElementById("homepageLogo").addEventListener(eventBasedOnDevice, function event(event) {
