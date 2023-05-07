@@ -1,3 +1,6 @@
+// Including stripe
+
+
 // Loader for the page
 document.onreadystatechange = function() {
   if (document.readyState !== "complete") {
@@ -253,14 +256,6 @@ class CommonHead extends HTMLElement{
   <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- google tag -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-0M4GEK1QY7');
-</script>
     `;
 
     // Change this into one function with if/esle if etc
