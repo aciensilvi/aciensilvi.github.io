@@ -1,6 +1,3 @@
-// Including stripe
-
-
 // Loader for the page
 document.onreadystatechange = function() {
   if (document.readyState !== "complete") {
