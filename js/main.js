@@ -4,7 +4,7 @@ document.onreadystatechange = function() {
     var loader = document.createElement('img');
     loader.id = 'loaderForSite'
     loader.classList = 'spinner-border';
-    loader.src = 'https://acien.es/images/logo.png'
+    loader.src = 'favicon.ico'
     loader.style = `
     position: absolute;
     top: 0;
@@ -21,9 +21,9 @@ document.onreadystatechange = function() {
       document.querySelector("body").style.visibility = "visible";
       document.querySelector("#loaderForSite").style.visibility = "hidden";
       document.getElementById("loaderForSite").remove();
+      if (homepage.indexOf(page) >= 0) {loadVideo();}
   }
 };
-
 // Load scripts from other js files
 function loadScript(url) {
   const script = document.createElement('script');

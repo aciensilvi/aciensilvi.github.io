@@ -1,4 +1,17 @@
-
+// Video
+function loadVideo() {
+  var video = document.createElement('video');
+  video.id = 'video';
+  video.src = 'documents/homepage.mp4';
+  video.classList= 'video-style';
+  video.playsinline = true;
+  video.autoplay = true;
+  video.loop = true;
+  video.muted = true;
+  video.setAttribute('playsinline','');
+  video.setAttribute('muted','');
+  document.getElementById('video').appendChild(video);
+}
 // Animate homepage logo
 const animateCSS = (element, animation, prefix = 'animate__') =>
 // We create a Promise and return it
