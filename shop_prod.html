@@ -1,17 +1,25 @@
 <html>
 <head>
 <app-head></app-head>
+<script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+
+    <!-- add to every page -->
+    <!-- <script src="https://js.stripe.com/v3/"></script> -->
 </head>
 <body>
 <app-navbar></app-navbar>
-        <div class="container">
+<!-- <script async src="https://js.stripe.com/v3/pricing-table.js"></script> -->
+<stripe-pricing-table pricing-table-id="prctbl_1NCkqWBOO9qFoNOFMCAUpbBw"
+publishable-key="pk_test_51N3NRnBOO9qFoNOFAfKzQgz2Wrmt5abl4geEQCATYVQM5HW7nWjxZLl56qsiTrLY4h8S5S16WunKinAQu0jbRCsx00jaeKMNdW">
+</stripe-pricing-table>
+        <!-- <div class="container">
             <div class="row">
                 <div class="col text-center">
                     <a class="projectLink" href="shop/jaula_invisible_gloves"><img class="fit_width_25 zoomIn2" src="images/6.png"><p class="projName">Jaula Invisible Gloves</p><p class="projDate">ORDER NOW</p></a>
                 </div>
             </div>
         </div>
-      </div>
+      </div> -->
 <app-footer></app-footer>
     </body>
 <script type="text/javascript" src="js/main.js"></script>
