@@ -209,7 +209,7 @@ class Footer extends HTMLElement{
   </div>
 </footer>
     `
-    if(['shop', 'index', ''].indexOf(page) >= 0){
+    if(['index', '',].indexOf(page) >= 0){
       document.querySelector('footer').classList.add('fixed-bottom');
     }
   }
