@@ -104,7 +104,7 @@ class Navbar extends HTMLElement{
   <a href="javascript:void(0)" class="backbtn" onclick="backToNav()">&crarr;</a>
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
   <div class="overlay-content">
-    <a href="regenerative_folklore">Regenerative folklore / 2023</a>
+    <a href="regenerative_folklore">Regenerative Folklore / 2023</a>
     <a href="maison_0_x_lvmh">Maison/0 x LVMH / 2022</a>
     <a href="evasion">Evasion / 2022</a>
     <a href="menigilda">Menigilda / 2022</a>
