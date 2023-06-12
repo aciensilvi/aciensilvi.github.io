@@ -39,8 +39,8 @@ var page = location.pathname.substring(
 if (page.includes(".html")) {
   page = page.replace(".html","");
 }
-const projects = ['regenerative_folklore', 'maison_0_x_lvmh', 'evasion', 'menigilda', 'caballo_andaluz','chelsea_fc_x_nike','soportujar','jaula_invisible','gallina_de_ciudad','overpopulated_world','la_veneno',"franco's_exhumation",'integrated_fight'];
-const magazines = ['fguk', 'hunter', 'malvie', 'office','sicky'];
+const projects = ['maison_0_x_lvmh', 'evasion', 'menigilda', 'caballo_andaluz','chelsea_fc_x_nike','soportujar','jaula_invisible','gallina_de_ciudad','overpopulated_world','la_veneno',"franco's_exhumation",'integrated_fight'];
+const magazines = ['regenerative_folklore', 'fguk', 'hunter', 'malvie', 'office','sicky'];
 const homepage = ['','index'];
 if (projects.indexOf(page) >= 0) {
   loadScript('./js/project.js');
@@ -77,7 +77,7 @@ if (projects.indexOf(page) >= 0) {
 let pageTitle = page.replace(/_/g, ' ');
 if (pageTitle.includes("maison")) {
   pageTitle = "maison/0 x lvmh"
-} else if (pageTitle.includes("index")) {
+} else if (['regenerative_folklore','','index'].indexOf(page) >= 0 || magazines.indexOf(page) >= 0) {
   pageTitle = ""
 }
 

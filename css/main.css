@@ -95,35 +95,13 @@
       cursor: pointer;
   }
   a.projectLink:hover{color:black}
-  p.white-purple {
-    font-family: VelvetHeart;
-    font-size: 60px;
-    text-shadow:
-    -1px -1px 0 #ff00e2,  
-     1px -1px 0 #ff00e2,
-     -1px 1px 0 #ff00e2,
-      1px 1px 0 #ff00e2;
-      line-height: .7;
-  }
-  p.black-purple {
-    font-family: VelvetHeart;
-    font-size: 60px;
-    color: black;
-    text-shadow:
-    -1px -1px 0 #ff00e2,  
-     1px -1px 0 #ff00e2,
-     -1px 1px 0 #ff00e2,
-      1px 1px 0 #ff00e2;
-      line-height: .7;
+  p {
+    font-family: Century Gothic;
+    font-size: 20px;
   }
   .fit_width_25 {
     width: 25% !important;
     height: auto !important;
-  }
-  p.black {
-    font-family: VelvetHeart;
-    font-size: 60px;
-    color: black;
   }
   .modal-title {
     font-family: VelvetHeart;
@@ -403,7 +381,17 @@ i {
    -1px 1px 0 #f1e5fb,
     1px 1px 0 #f1e5fb;
 }
-
+.margin-right{
+  margin-right:60px
+}
+/* For xl */
+@media (max-width: 1199px) {
+  .margin-right{
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+/* For lg  */
 @media (max-width: 991.2px) {
   .behind{
     height: 100%;
