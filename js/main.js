@@ -40,7 +40,7 @@ if (page.includes(".html")) {
   page = page.replace(".html","");
 }
 const projects = ['maison_0_x_lvmh', 'evasion', 'menigilda', 'caballo_andaluz','chelsea_fc_x_nike','soportujar','jaula_invisible','gallina_de_ciudad','overpopulated_world','la_veneno',"franco's_exhumation",'integrated_fight'];
-const magazines = ['fguk', 'hunter', 'malvie', 'office','sicky'];
+const magazines = ['regenerative_folklore', 'fguk', 'hunter', 'malvie', 'office','sicky'];
 const homepage = ['','index'];
 if (projects.indexOf(page) >= 0) {
   loadScript('./js/project.js');
@@ -77,7 +77,7 @@ if (projects.indexOf(page) >= 0) {
 let pageTitle = page.replace(/_/g, ' ');
 if (pageTitle.includes("maison")) {
   pageTitle = "maison/0 x lvmh"
-} else if (pageTitle.includes("index")) {
+} else if (['regenerative_folklore','','index'].indexOf(page) >= 0 || magazines.indexOf(page) >= 0) {
   pageTitle = ""
 }
 
@@ -104,7 +104,8 @@ class Navbar extends HTMLElement{
   <a href="javascript:void(0)" class="backbtn" onclick="backToNav()">&crarr;</a>
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
   <div class="overlay-content">
-    <a href="maison_0_x_lvmh">Maison/0 x LVMH / 2022</a></li>
+    <a href="regenerative_folklore">Regenerative Folklore / 2023</a>
+    <a href="maison_0_x_lvmh">Maison/0 x LVMH / 2022</a>
     <a href="evasion">Evasion / 2022</a>
     <a href="menigilda">Menigilda / 2022</a>
     <a href="caballo_andaluz">Caballo Andaluz / 2021</a>
@@ -134,6 +135,7 @@ class Navbar extends HTMLElement{
       <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button">Collections</a>
           <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="regenerative_folklore">Regenerative Folklore / 2023</a></li>
             <li><a class="dropdown-item" href="maison_0_x_lvmh">Maison/0 x LVMH / 2022</a></li>
             <li><a class="dropdown-item" href="evasion">Evasion / 2022</a></li>
             <li><a class="dropdown-item" href="menigilda">Menigilda / 2022</a></li>
