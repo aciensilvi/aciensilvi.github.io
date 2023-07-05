@@ -51,3 +51,14 @@ switch(Math.floor(Math.random() * 5)) {
   case 4 : animateCSS('.homepageLogo', 'tada'); break;
 }
 }
+
+// Hide the logo in the menu if logo is seen on the page
+document.querySelector("nav a").style.visibility = "hidden";
+window.addEventListener("scroll", function() {
+  var elementTarget = document.getElementById("homepageLogo");
+  if (window.scrollY < (elementTarget.offsetTop + elementTarget.offsetHeight)) {
+      document.querySelector("nav a").style.visibility = "hidden";
+  } else {
+    document.querySelector("nav a").style.visibility = "visible";
+  }
+});

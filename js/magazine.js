@@ -9,7 +9,7 @@ class Magazine extends HTMLElement {
       // Loop itself
       for ( let i = 1; i <= imageCount; i++) {
         carousel_inner += `<div class="carousel-item">
-        <img src="images/magazines/` + page +`/${i}.jpg" class="d-block pic_w50 mx-auto" alt="Acien x FGUK">
+        <img src="images/magazines/` + page +`/${i}.jpg" class="d-block pic_w50 mx-auto" alt="Acien x `+ page +`">
       </div>`;
       } 
       let carousel_indicators = "";

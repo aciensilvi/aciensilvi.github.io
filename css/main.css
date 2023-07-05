@@ -1,8 +1,8 @@
 @import "menu-overlay.css";
 @font-face {
-    font-family: Century Gothic;
-    src: url(../fonts/GOTHIC.TTF);
-  }
+  font-family: Century Gothic;
+  src: url(../fonts/GOTHIC.TTF);
+}
   html, body {
     background-color: white;
              -webkit-background-size: cover;
@@ -383,6 +383,17 @@ i {
 }
 .margin-right{
   margin-right:60px
+}
+.shop-title{
+  font-family: Century Gothic;
+  margin-top: 8px;
+}
+a.shop-title{
+  color: black;
+  text-decoration: none;
+}
+a.shop-title:hover{
+  text-decoration: underline;
 }
 /* For xl */
 @media (max-width: 1199px) {

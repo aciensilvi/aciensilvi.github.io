@@ -42,12 +42,16 @@ if (page.includes(".html")) {
 const projects = ['maison_0_x_lvmh', 'evasion', 'menigilda', 'caballo_andaluz','chelsea_fc_x_nike','soportujar','jaula_invisible','gallina_de_ciudad','overpopulated_world','la_veneno',"franco's_exhumation",'integrated_fight'];
 const magazines = ['regenerative_folklore', 'fguk', 'hunter', 'malvie', 'office','sicky'];
 const homepage = ['','index'];
+const shop = ['','index','shop','tabernas_hat']
 if (projects.indexOf(page) >= 0) {
   loadScript('./js/project.js');
 } else if (magazines.indexOf(page) >= 0) {
   loadScript('./js/magazine.js');
 } else if (homepage.indexOf(page) >= 0) {
   loadScript('./js/home.js');
+  loadScript('./js/shop.js');
+} else if (shop.indexOf(page) >= 0) {
+  loadScript('./js/shop.js');
 }
 
 // Menu actions
@@ -86,7 +90,6 @@ class Navbar extends HTMLElement{
     this.innerHTML = `
     <nav class="navbar navbar-expand-lg py-4 sticky-top white-bg-1">
   <a class="navbar-brand" href="/"><img src="images/logo.png" style="max-height:70px;"></a>
-  <!-- <p class="d-lg-none position-absolute top-50 start-50 translate-middle page-name">Press</p> -->
   <p class="d-lg-none mx-auto page-name">`
   + pageTitle +
   `</p>
@@ -183,12 +186,6 @@ class Navbar extends HTMLElement{
         el.classList.add('current');
       }
     });
-
-    
-    // Add a current class to the menu item for phone menu
-      if (['index', ''].indexOf(page) >= 0){
-        document.querySelector("nav img").style.visibility = "hidden";
-      };
   }  
 }
 
