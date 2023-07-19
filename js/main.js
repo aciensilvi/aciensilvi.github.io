@@ -42,7 +42,7 @@ if (page.includes(".html")) {
 const projects = ['maison_0_x_lvmh', 'evasion', 'menigilda', 'caballo_andaluz','chelsea_fc_x_nike','soportujar','jaula_invisible','gallina_de_ciudad','overpopulated_world','la_veneno',"franco's_exhumation",'integrated_fight'];
 const magazines = ['regenerative_folklore', 'fguk', 'hunter', 'malvie', 'office','sicky'];
 const homepage = ['','index'];
-const shop = ['','index','shop','tabernas_hat']
+const shop = ['','index','shop','tabernas_hat','carnation_hat','shop_item']
 if (projects.indexOf(page) >= 0) {
   loadScript('./js/project.js');
 } else if (magazines.indexOf(page) >= 0) {
@@ -210,6 +210,10 @@ class Footer extends HTMLElement{
     `
     if(['index', '',].indexOf(page) >= 0){
       document.querySelector('footer').classList.add('fixed-bottom');
+    } else {
+      // Add some styles to all other pages so that footer will be pushed to the bottom
+      document.querySelector('footer').style.position = 'sticky';
+      document.querySelector('footer').style.top = '100%';
     }
   }
 }

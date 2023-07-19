@@ -57,7 +57,7 @@ class Magazine extends HTMLElement {
         }
       });
       // Add active class to the first item in the list
-      document.querySelectorAll('[data-bs-target="#carouselExampleIndicators"]').forEach(el => {
+      document.querySelectorAll('[aria-label^=Slide]').forEach(el => {
         if (el.getAttribute('data-bs-slide-to').includes('0')) {
           el.classList.add('active');
           el.setAttribute('aria-current','true');

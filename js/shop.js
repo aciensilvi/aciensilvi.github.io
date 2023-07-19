@@ -1,30 +1,19 @@
-const shopItems1 = ["TABERNAS HAT",
-'CARNATION HAT'];
-
-const shopItemsPictureNumver = [5,
-  7];
-
-const shopItems = new Map ();
-shopItems.set("TABERNAS HAT",5,"Description","Regenrative materials","httpS;///");
-shopItems.set("CARMATION HAT",5,"Description","Short Description","httpS;///");
-
 class shopItem {
-  constructor(title,amount,description,short_description,link) {
+  constructor(title,amount,short_description,link) {
     this.title = title;
     this.amount = amount;
-    this.description = description;
     this.short_description = short_description;
     this.link = link;
     this.linkToItem = title.toLowerCase().replace(" ","_");
   }
 }
-tabernas = new shopItem("TABERNAS HAT",4,"Description","Regenrative materials","httpS;///");
-carnation = new shopItem("CARNATION HAT",5,"Description","Short Description","httpS;///");
+tabernas = new shopItem("TABERNAS HAT",4,"Regenrative materials","https://docs.google.com/forms/d/e/1FAIpQLSfwUTVYOcDEiWB0dPzPrBpUZsiKROyBnfFhusImUwh3b8a5lg/viewform");
+carnation = new shopItem("CARNATION HAT",3,"Regenrative materials","https://docs.google.com/forms/d/e/1FAIpQLScnJelnosuK6A9Ne4EBDuaI-nxqRQHXSXjw_uta9oCxXcT0zg/viewform");
 const shopItemList = [tabernas,carnation];
 
 
 let columnForShopItem = "";
-  for (let item of shopItems.keys()) {
+for (let item of shopItemList) {
   // TODO : change the id otherwise it does not work...
   columnForShopItem += `
   <div class="col-md-6 text-center ">
@@ -141,7 +130,7 @@ let shopPage = '';
               }
             });
             // Add active class to the first item in the list
-            document.querySelectorAll('[data-bs-target^="#carousel_"]').forEach(el => {
+            document.querySelectorAll('[aria-label^=Slide]').forEach(el => {
               if (el.getAttribute('data-bs-slide-to').includes('0')) {
                 el.classList.add('active');
                 el.setAttribute('aria-current','true');
@@ -152,15 +141,9 @@ let shopPage = '';
   }
 
   class ShopItem extends HTMLElement {
-
-
-    
     connectedCallback() {
-    
       const itemNameFromWeb = document.querySelector('app-shop-item').getAttribute('item');
-      const description = document.querySelector('app-shop-item');
-
-
+      const description = document.querySelector('description');
 
       let ourItem;
       //if this item is on the list then our item is that one
@@ -177,7 +160,7 @@ let shopPage = '';
            // Loop itself
            for ( let i = 1; i <= imageCount; i++) {
              carousel_inner += `<div class="carousel-item">
-             <img src="images/shop/`+ page +`/${i}.jpg" class="d-block pic_w50 mx-auto" alt="`+ ourItem.title +`">
+             <img src="images/shop/`+ page +`/${i}.jpg" class="d-block pic_w75 mx-auto" alt="`+ ourItem.title +`">
            </div>`;
            } 
            let carousel_indicators = "";
@@ -211,8 +194,8 @@ let shopPage = '';
         </div>
         <div class="col-md-6 text-center">
       
-          <h2 class="shop-title">`+ ourItem.title +`</h2>
-          <p>`+ ourItem.description +`</p>
+          <h2 class="shop-title d-none d-lg-block">`+ ourItem.title +`</h2>
+          <description>`+ description.innerHTML +`<description>
        <div class="d-grid gap-2 col-6 mx-auto">
         <a class="button btn btn-primary" href="` + ourItem.link + `" target="_blank">Buy</a>
       </div>
@@ -226,12 +209,25 @@ let shopPage = '';
         }
       });
       // Add active class to the first item in the list
-      document.querySelectorAll('[data-bs-target="#carouselExampleIndicators1"]').forEach(el => {
+      document.querySelectorAll('[aria-label^=Slide]').forEach(el => {
         if (el.getAttribute('data-bs-slide-to').includes('0')) {
           el.classList.add('active');
           el.setAttribute('aria-current','true');
         }
       });
+
+      description.remove();
+
+      function includeFSlightbox(file) {
+        var script = document.createElement('script');
+        script.src = file;
+        script.type = 'text/javascript';
+        script.crossorigin = "anonymous";
+    
+        var s = document.body.firstChild;
+        s.parentNode.insertBefore(script, s);
+        }
+        includeFSlightbox("js/fslightbox.js");
 
     }
 
