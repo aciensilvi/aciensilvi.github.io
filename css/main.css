@@ -47,6 +47,10 @@
   .fixed-bottom {
     z-index: 1000;
   }
+  footer{
+    position: sticky;
+    top: 100%;
+  }
   .footerIcon{
        font-size: 38px;
   }
@@ -423,6 +427,12 @@ div.accordion-body {
 
 body { /* the main container */
   min-height: 100vh;
+}
+
+main {
+  background: white;
+  position: relative;
+  margin-top: 90vh;
 }
 
 /* For xl */

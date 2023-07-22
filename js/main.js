@@ -208,13 +208,6 @@ class Footer extends HTMLElement{
   </div>
 </footer>
     `
-    if(['index', '',].indexOf(page) >= 0){
-      document.querySelector('footer').classList.add('fixed-bottom');
-    } else {
-      // Add some styles to all other pages so that footer will be pushed to the bottom
-      document.querySelector('footer').style.position = 'sticky';
-      document.querySelector('footer').style.top = '100%';
-    }
   }
 }
 
