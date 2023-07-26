@@ -62,3 +62,36 @@ window.addEventListener("scroll", function() {
     document.querySelector("nav a").style.visibility = "visible";
   }
 });
+
+// Scroll to shop section javascript
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll(".scroller a");
+
+  links.forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = this.getAttribute("href");
+      const targetElement = document.querySelector(target);
+
+      if (targetElement) {
+        const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        const duration = 500;
+        const startTime = performance.now();
+
+        function scrollAnimation(currentTime) {
+          const elapsedTime = currentTime - startTime;
+          const progress = Math.min(elapsedTime / duration, 1);
+          const easeFunction = progress => progress; // You can replace this with your desired easing function
+
+          window.scrollTo(0, window.scrollY + easeFunction(progress) * (offsetTop - window.pageYOffset));
+
+          if (elapsedTime < duration) {
+            requestAnimationFrame(scrollAnimation);
+          }
+        }
+
+        requestAnimationFrame(scrollAnimation);
+      }
+    });
+  });
+});
