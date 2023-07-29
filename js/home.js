@@ -10,6 +10,8 @@ function loadVideo() {
   video.muted = true;
   video.setAttribute('playsinline','');
   video.setAttribute('muted','');
+  video.setAttribute('preload','none');
+  video.setAttribute('poster','images/white.png');
   document.getElementById('video').appendChild(video);
 }
 // Animate homepage logo
