@@ -435,7 +435,6 @@ body { /* the main container */
 }
 
 main {
-  background: white;
   position: relative;
   margin-top: 90vh;
 }
