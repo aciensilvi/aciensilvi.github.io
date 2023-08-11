@@ -4,7 +4,9 @@
   src: url(../fonts/GOTHIC.TTF);
 }
   html, body {
-    background-color: white;
+    /* background-color: white; */
+    background: rgb(217,255,183);
+    background: linear-gradient(0deg, rgba(217,255,183,1) 0%, rgba(255,255,255,1) 100%);
              -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -161,6 +163,7 @@ text-shadow:
   .fit_width {
     width: 100% !important;
     height: auto !important;
+    border-radius: 1.25rem;
   }
   .white-bg-1 {
     background: rgba(116, 0, 220, 0.1);
@@ -218,9 +221,11 @@ text-shadow:
   }
   .pic_w50{
     width: 50%!important;
+    border-radius: 1.25rem;
   }
   .pic_w75{
     width: 75%!important;
+    border-radius: 1.25rem;
   }
   @media (max-width: 450px) {
     .pic_w50{
