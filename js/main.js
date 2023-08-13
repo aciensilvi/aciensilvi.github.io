@@ -124,7 +124,7 @@ class Navbar extends HTMLElement{
 </div>
 <a href="contact">Contact</a>
 <a href="about">About</a>
-<a href="press">Press</a>
+<a href="services">Services</a>
 </div>
 </div>
 <!-- Use any element to open/show the overlay navigation menu -->
@@ -160,8 +160,8 @@ class Navbar extends HTMLElement{
           <a class="nav-link" href="about">About</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link" href="press">Press</a>
-      </li>
+      <a class="nav-link" href="seervices">Services</a>
+    </li>
   </ul>
 </div>
 </nav>
@@ -192,6 +192,38 @@ class Navbar extends HTMLElement{
 class Footer extends HTMLElement{
   connectedCallback(){ 
     this.innerHTML = `
+    <div class="marquee marquee--hover-pause">
+    <ul class="marquee__content">
+   <li><p class="text-center gradient"><span>Featured in:</span></p></li>
+     <li><a href="office"><img class="featured-logo" src="images/magazines/office.png"></a></li>
+       <li><a href="fguk"><img class="featured-logo" src="images/magazines/fguk.png"></a></li>
+       <li><a href="sicky"><img class="featured-logo" src="images/magazines/sicky.png"></a></li>
+       <li><a href="malvie"><img class="featured-logo" src="images/magazines/malvie.png"></a></li>
+       <li><a href="hunter"><img class="featured-logo" src="images/magazines/hunter.png"></a></li>
+       <li><a href="https://www.notjustalabel.com/acien" target="_blank"><img class="featured-logo" src="images/magazines/not_just_a_label.png"></a></li>
+       <li><a href="https://www.sleek-mag.com/article/everything-you-need-to-know-about-the-csm-ba-graduate-show/#343139333535" target="_blank"><img class="featured-logo" src="images/magazines/sleek.png"></a></li>
+       <li><a href="https://1granary.com/designers-3/graduate-shows/csm-ba-fashion-2023-sensibility-spirituality-and-wholesomeness-2/" target="_blank"><img class="featured-logo" src="images/magazines/1granary.png"></a></li>
+       <li><a href="https://www.murphysmagazine.com/designer/silvia-acien" target="_blank"><img class="featured-logo" src="images/magazines/muprhys.png"></a></li>
+       <li><p class="text-center gradient"><span>Awards:</span></p></li>
+       <li><img height="20" src="images/awards/lvmh.png"></li>
+       <li><img height="36" src="images/awards/framework_knitters.png" title="Framework Knitters"></li>
+    </ul>
+    <ul aria-hidden="true" class="marquee__content">
+   <li><p class="text-center gradient"><span>Featured in:</span></p></li>
+     <li><a href="office"><img class="featured-logo" src="images/magazines/office.png"></a></li>
+     <li><a href="fguk"><img class="featured-logo" src="images/magazines/fguk.png"></a></li>
+     <li><a href="sicky"><img class="featured-logo" src="images/magazines/sicky.png"></a></li>
+     <li><a href="malvie"><img class="featured-logo" src="images/magazines/malvie.png"></a></li>
+       <li><a href="hunter"><img class="featured-logo" src="images/magazines/hunter.png"></a></li>
+       <li><a href="https://www.notjustalabel.com/acien" target="_blank"><img class="featured-logo" src="images/magazines/not_just_a_label.png"></a></li>
+       <li><a href="https://www.sleek-mag.com/article/everything-you-need-to-know-about-the-csm-ba-graduate-show/#343139333535" target="_blank"><img class="featured-logo" src="images/magazines/sleek.png"></a></li>
+       <li><a href="https://1granary.com/designers-3/graduate-shows/csm-ba-fashion-2023-sensibility-spirituality-and-wholesomeness-2/" target="_blank"><img class="featured-logo" src="images/magazines/1granary.png"></a></li>
+       <li><a href="https://www.murphysmagazine.com/designer/silvia-acien" target="_blank"><img class="featured-logo" src="images/magazines/muprhys.png"></a></li>
+   <li><p class="text-center gradient"><span>Awards:</span></p></li>
+   <li><img height="20" src="images/awards/lvmh.png"></li>
+   <li><img height="36" src="images/awards/framework_knitters.png" title="Framework Knitters"></li>
+   </ul>
+   </div>
     <footer class="text-center text-white white-bg-1" id=#footer>
   <!-- Grid container -->
   <div class="container pt-2">
@@ -206,6 +238,8 @@ class Footer extends HTMLElement{
       <a href="https://www.linkedin.com/in/silvia-acien-parrilla-3a0296216" target="blank"><i class="btn fa-brands fa-linkedin fa-lg footerIcon"></i></a>
     <!-- Section: Social media -->
   </div>
+  <a class="d-none d-sm-block position-absolute start-0 lad8s" href="https://lad8s.com" target="_blank">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img height="24" src="images/lad8s_logo.png"> developed</a>
 </footer>
     `
   }

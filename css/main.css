@@ -5,8 +5,8 @@
 }
   html, body {
     /* background-color: white; */
-    background: rgb(217,255,183);
-    background: linear-gradient(0deg, rgba(217,255,183,1) 0%, rgba(255,255,255,1) 100%);
+    background: rgb(227,255,201);
+    background: linear-gradient(0deg, rgba(227,255,201,1) 0%, rgba(255,255,255,1) 100%);
              -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -101,7 +101,7 @@
       cursor: pointer;
   }
   a.projectLink:hover{color:black}
-  p {
+  p, li {
     font-family: Century Gothic;
     font-size: 20px;
   }
@@ -348,10 +348,6 @@ text-shadow:
   width: 60%;
   height: 600px;
 }
-li{
-  font-family: Century Gothic;
-  font-size: 17px;
-}
 .blockquote-left{
   border-left: 3px solid black;
   padding-left: 30px; 
@@ -410,7 +406,7 @@ a.shop-title{
 a.shop-title:hover{
   text-decoration: underline;
 }
-description p, li{
+description p, description li{
   text-align: left;
   font-size: 12px;
 }
@@ -469,6 +465,79 @@ main {
   animation: sdb04 2s infinite;
   box-sizing: border-box;
 }
+.btn {
+  border-radius: 1.25rem;
+}
+
+/* Marquee styles */
+.marquee {
+  --gap: 1rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 100%;
+  list-style-type: none
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+/* Pause animation when reduced-motion is set */
+@media (prefers-reduced-motion: reduce) {
+  .marquee__content {
+    animation-play-state: paused !important;
+  }
+}
+
+/* Enable animation */
+.marquee__content {
+  animation: scroll 25s linear infinite;
+}
+
+/* Pause on hover */
+.marquee--hover-pause:hover .marquee__content {
+  animation-play-state: paused;
+}
+
+/* Attempt to size parent based on content. Keep in mind that the parent width is equal to both content containers that stretch to fill the parent. */
+.marquee--fit-content {
+  max-width: fit-content;
+}
+
+.featured-logo {
+  width: 100px;
+}
+
+p.gradient span {
+  background: linear-gradient(0deg, rgba(255,0,255,0) 0%, rgba(255,0,255,0) 16%, #f1e5fb 16%, #f1e5fb  41%, rgba(255,0,255,0) 41%);
+} 
+
+.lad8s {
+  text-decoration:none;
+  color:white;
+  top: 25!important;
+  opacity: 0.4;
+}
+.lad8s:hover{
+  opacity: 1;
+  color: black;
+}
+
 @-webkit-keyframes sdb04 {
   0% {
     -webkit-transform: rotate(-45deg) translate(0, 0);
@@ -522,5 +591,8 @@ main {
 }
 .homepageLogo{
   width: 55%;
+}
+h3.gradient span {
+  font-size: 42px;
 }
 }
