@@ -7,8 +7,8 @@ class shopItem {
     this.linkToItem = title.toLowerCase().replace(" ","_");
   }
 }
-tabernas = new shopItem("TABERNAS HAT",4,"Regenrative materials","https://docs.google.com/forms/d/e/1FAIpQLSfwUTVYOcDEiWB0dPzPrBpUZsiKROyBnfFhusImUwh3b8a5lg/viewform");
-carnation = new shopItem("CARNATION HAT",3,"Regenrative materials","https://docs.google.com/forms/d/e/1FAIpQLScnJelnosuK6A9Ne4EBDuaI-nxqRQHXSXjw_uta9oCxXcT0zg/viewform");
+tabernas = new shopItem("TABERNAS HAT",4,"Regenerative materials","https://docs.google.com/forms/d/e/1FAIpQLSfwUTVYOcDEiWB0dPzPrBpUZsiKROyBnfFhusImUwh3b8a5lg/viewform");
+carnation = new shopItem("CARNATION HAT",3,"Regenerative materials","https://docs.google.com/forms/d/e/1FAIpQLScnJelnosuK6A9Ne4EBDuaI-nxqRQHXSXjw_uta9oCxXcT0zg/viewform");
 const shopItemList = [tabernas,carnation];
 
 
