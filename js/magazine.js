@@ -27,7 +27,7 @@ class Magazine extends HTMLElement {
               </div><br>
               <div class="row justify-content-md-center">
                 <div class="col-md-8 text-center ">
-                <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="carousel">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-touch="true"  data-bs-ride="carousel">
                 <div class="carousel-indicators ">`
                 + carousel_indicators +
                     `</div>

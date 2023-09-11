@@ -18,7 +18,7 @@ for (let item of shopItemList) {
   columnForShopItem += `
   <div class="col-md-6 text-center ">
   <h1>` + item + `</h1>
-<div id="carouselExampleIndicators` + item + `" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleIndicators` + item + `" class="carousel slide" data-bs-touch="true"  data-bs-ride="carousel"data-bs-ride="carousel">
 <div class="carousel-indicators">
 <button type="button" data-bs-target="#carouselExampleIndicators` + item + `" data-bs-slide-to="0" aria-label="Slide 1" class="active" aria-current="true"></button>
 
@@ -92,14 +92,14 @@ let shopPage = '';
 
         shopPage += `
         <div class="col-md-6 text-center ">
-        <div id="carousel_`+ eachShopItem.linkToItem +`" class="carousel slide"  data-bs-interval="false">
+        <div id="carousel_`+ eachShopItem.linkToItem +`" class="carousel slide" data-bs-touch="true"  data-bs-ride="carousel" data-bs-interval="false">
         <div class="carousel-indicators">`
         + carousel_indicators +
         `
     </div>
-          <a href='`+ eachShopItem.linkToItem +`'><div class="carousel-inner">`
+          <a href='`+ eachShopItem.linkToItem +`' class="shop-title"><div class="carousel-inner">`
           + carousel_inner +
-          `</div></a>
+          `</div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carousel_`+ eachShopItem.linkToItem +`" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
@@ -109,7 +109,7 @@ let shopPage = '';
               <span class="visually-hidden">Next</span>
             </button>
           </div>
-          <a href="`+ eachShopItem.linkToItem +`" class="shop-title"><h2 class="shop-title">`+ eachShopItem.title +`</h2>
+          <h2 class="shop-title">`+ eachShopItem.title +`</h2>
       
           <div class="d-grid gap-2 col-6 mx-auto"><p>`+ eachShopItem.short_description +`</p></a>
             </div>
@@ -122,6 +122,18 @@ let shopPage = '';
       + shopPage +
       `</div>
       </div>
+
+      <div class="container-fluid">
+<div class="row justify-content-md-center">
+    <div class="col-md-6 text-center">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdl7ZdqLxmv6705tFo69L8AK_GY3TV3BOQDTR9dB6t7al2VMg/viewform" target="_blank" class="shop-title">
+    <img class="pic_w50" src="images/shop/made_to_order.jpeg">
+    <h2 class="shop-title">MADE TO ORDER HAT</h2>
+    <p>Regenerative materials</p>
+        </a>
+</div>
+</div>
+</div>
       `
             // Add active class to the first item in the list
             document.querySelectorAll('.carousel-item').forEach(el => {
@@ -174,7 +186,7 @@ let shopPage = '';
       <div class="container-fluid">
       <div class="row justify-content-md-center">
           <div class="col-md-6 text-center ">
-          <div id="carouselExampleIndicators1" class="carousel slide"  data-bs-interval="false">
+          <div id="carouselExampleIndicators1" class="carousel slide" data-bs-touch="true"  data-bs-ride="carousel"data-bs-interval="false">
           <div class="carousel-indicators">`
           + carousel_indicators +
           `
