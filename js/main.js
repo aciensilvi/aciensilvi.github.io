@@ -196,6 +196,7 @@ class Footer extends HTMLElement{
     <ul class="marquee__content">
    <li><p class="text-center gradient"><span>Featured in:</span></p></li>
     <li><a href="https://www.wsj.com/style/fashion/young-fashion-designers-5e84f3fb?st=9yrj08edlgvm8rw" target="_blank"><img  height="35" src="images/magazines/wsj-logo-alt.svg"></a></li>
+    <li><a href="https://talkingtextilesmag.com/silvia-acien" target="_blank"><img  height="35" src="images/magazines/talking_textiles.png"></a></li>
      <li><a href="office"><img class="featured-logo" src="images/magazines/office.png"></a></li>
        <li><a href="fguk"><img class="featured-logo" src="images/magazines/fguk.png"></a></li>
        <li><a href="sicky"><img class="featured-logo" src="images/magazines/sicky.png"></a></li>
@@ -212,7 +213,8 @@ class Footer extends HTMLElement{
     <ul aria-hidden="true" class="marquee__content">
    <li><p class="text-center gradient"><span>Featured in:</span></p></li>
    <li><a href="https://www.wsj.com/style/fashion/young-fashion-designers-5e84f3fb?st=9yrj08edlgvm8rw" target="_blank"><img  height="35" src="images/magazines/wsj-logo-alt.svg"></a></li>
-     <li><a href="office"><img class="featured-logo" src="images/magazines/office.png"></a></li>
+   <li><a href="https://talkingtextilesmag.com/silvia-acien" target="_blank"><img  height="35" src="images/magazines/talking_textiles.png"></a></li>  
+   <li><a href="office"><img class="featured-logo" src="images/magazines/office.png"></a></li>
      <li><a href="fguk"><img class="featured-logo" src="images/magazines/fguk.png"></a></li>
      <li><a href="sicky"><img class="featured-logo" src="images/magazines/sicky.png"></a></li>
      <li><a href="malvie"><img class="featured-logo" src="images/magazines/malvie.png"></a></li>
