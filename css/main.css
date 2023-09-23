@@ -561,6 +561,10 @@ p.gradient span {
   }
 }
 
+#price {
+  font-family: Century Gothic;
+}
+
 /* For xl */
 @media (max-width: 1199px) {
   .margin-right{

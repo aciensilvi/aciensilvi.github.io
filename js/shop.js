@@ -1,14 +1,28 @@
 class shopItem {
-  constructor(title,amount,short_description,link) {
+  constructor(title,amount,short_description,link1,link2,linkCustom,price1,price2) {
     this.title = title;
     this.amount = amount;
     this.short_description = short_description;
-    this.link = link;
+    this.link1 = link1;
+    this.link2 = link2;
+    this.linkCustom = linkCustom;
+    this.price1 = price1;
+    this.price2 = price2;
     this.linkToItem = title.toLowerCase().replace(" ","_");
   }
 }
-tabernas = new shopItem("TABERNAS HAT",4,"Regenerative materials","https://docs.google.com/forms/d/e/1FAIpQLSfwUTVYOcDEiWB0dPzPrBpUZsiKROyBnfFhusImUwh3b8a5lg/viewform");
-carnation = new shopItem("CARNATION HAT",3,"Regenerative materials","https://docs.google.com/forms/d/e/1FAIpQLScnJelnosuK6A9Ne4EBDuaI-nxqRQHXSXjw_uta9oCxXcT0zg/viewform");
+tabernas = new shopItem("TABERNAS HAT",4,"Regenerative materials",
+"https://buy.stripe.com/28o15M0OnabT1ag28f",
+"https://buy.stripe.com/6oE7ua0Onfwd6uAfZ4",
+"https://docs.google.com/forms/d/e/1FAIpQLSfwUTVYOcDEiWB0dPzPrBpUZsiKROyBnfFhusImUwh3b8a5lg/viewform",
+"\u00A3900",
+"\u00A3850");
+carnation = new shopItem("CARNATION HAT",3,"Regenerative materials",
+"https://buy.stripe.com/fZeg0GeFdgAhaKQ4gp",
+"https://buy.stripe.com/14keWCdB9ck13io8wE",
+"https://docs.google.com/forms/d/e/1FAIpQLScnJelnosuK6A9Ne4EBDuaI-nxqRQHXSXjw_uta9oCxXcT0zg/viewform",
+"\u00A3950",
+"\u00A3900");
 const shopItemList = [tabernas,carnation];
 
 
@@ -18,7 +32,7 @@ for (let item of shopItemList) {
   columnForShopItem += `
   <div class="col-md-6 text-center ">
   <h1>` + item + `</h1>
-<div id="carouselExampleIndicators` + item + `" class="carousel slide" data-bs-touch="true"  data-bs-ride="carousel"data-bs-ride="carousel">
+<div id="carouselExampleIndicators` + item + `" class="carousel slide" data-bs-touch="true"  data-bs-ride="carousel">
 <div class="carousel-indicators">
 <button type="button" data-bs-target="#carouselExampleIndicators` + item + `" data-bs-slide-to="0" aria-label="Slide 1" class="active" aria-current="true"></button>
 
@@ -110,6 +124,7 @@ let shopPage = '';
             </button>
           </div>
           <h2 class="shop-title">`+ eachShopItem.title +`</h2>
+          <h5 id="price">` + eachShopItem.price2 + `<h5>
       
           <div class="d-grid gap-2 col-6 mx-auto"><p>`+ eachShopItem.short_description +`</p></a>
             </div>
@@ -153,9 +168,11 @@ let shopPage = '';
   }
 
   class ShopItem extends HTMLElement {
+    
     connectedCallback() {
       const itemNameFromWeb = document.querySelector('app-shop-item').getAttribute('item');
       const description = document.querySelector('description');
+
 
       let ourItem;
       //if this item is on the list then our item is that one
@@ -208,9 +225,21 @@ let shopPage = '';
       
           <h2 class="shop-title d-none d-lg-block">`+ ourItem.title +`</h2>
           <description>`+ description.innerHTML +`<description>
-       <div class="d-grid gap-2 col-6 mx-auto">
-        <a class="button btn btn-primary" href="` + ourItem.link + `" target="_blank">Buy</a>
-      </div>
+          <div class="row">
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <select class="form-select" id="selectOption" aria-label="Select option">
+              <option value="1" selected>With straps</option>
+              <option value="2">Without straps</option>
+              <option value="3">Made to order</option>
+            </select>
+            <a id="buyButton" class="button btn btn-primary" href="`+ ourItem.link1 +`" target="_blank">Buy</a>
+          </div>
+          <div class="col text-center text-justfy my-auto" id="priceContainer">
+            <h2 id="price">`+ ourItem.price1 +`</h2>
+            <p class="text-center">* No returns. No exchanges.</p>
+          </div>
+        </div>
+          <br>
         </div>
         </div></div><br>`
 
@@ -241,11 +270,45 @@ let shopPage = '';
         }
         includeFSlightbox("js/fslightbox.js");
 
-    }
+    // Get references to the select element, price elements, and the buy button
+    const selectOption = document.getElementById("selectOption");
+    const priceElement = document.getElementById("price");
+    const priceContainer = document.getElementById("priceContainer");
+    const buyButton = document.getElementById("buyButton");
 
-    
-    
+    // Define the price values and links for each option
+    const options = {
+      1: { price: ourItem.price1, link: ourItem.link1 },
+      2: { price: ourItem.price2, link: ourItem.link2 },
+      3: { price: "Custom Price", link: ourItem.linkCustom },
+    };
+
+    // Function to update the price, link, and show/hide the container when an option is selected
+    selectOption.addEventListener("change", function() {
+      const selectedOption = selectOption.value;
+      if (selectedOption === "3") {
+        // If "Custom" is selected, hide the price container and update the link
+        priceContainer.style.display = "none";
+        buyButton.href = options[selectedOption].link;
+      } else {
+        // Otherwise, show the price container, update the price, and link
+        priceElement.textContent = options[selectedOption].price;
+        priceContainer.style.display = "block";
+        buyButton.href = options[selectedOption].link;
+      }
+    });
+
+    // Initialize the price and link when the page loads
+    window.addEventListener("load", function() {
+      const selectedOption = selectOption.value;
+      priceElement.textContent = options[selectedOption].price;
+      buyButton.href = options[selectedOption].link;
+    });
+
+    }
   }
+
+  
 
   customElements.define('app-shop', Shop);  
   customElements.define('app-shop-item', ShopItem);  
