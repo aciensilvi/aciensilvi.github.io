@@ -189,44 +189,31 @@ class Navbar extends HTMLElement{
   }  
 }
 
+marqueeContent = `<li><p class="text-center gradient"><span>Featured in:</span></p></li>
+<li><a href="https://www.neworderoffashion.com/talents/talent-talks-silvia-acien-parrilla" target="_blank"><img  height="35" src="images/magazines/New+order+of+Fashion+Icon.png"></a></li>
+<li><a href="https://www.wsj.com/style/fashion/young-fashion-designers-5e84f3fb" target="_blank"><img  height="35" src="images/magazines/wsj-logo-alt.svg"></a></li>
+<li><a href="https://talkingtextilesmag.com/silvia-acien" target="_blank"><img  height="35" src="images/magazines/talking_textiles.png"></a></li>
+ <li><a href="office"><img class="featured-logo" src="images/magazines/office.png"></a></li>
+   <li><a href="fguk"><img class="featured-logo" src="images/magazines/fguk.png"></a></li>
+   <li><a href="sicky"><img class="featured-logo" src="images/magazines/sicky.png"></a></li>
+   <li><a href="malvie"><img class="featured-logo" src="images/magazines/malvie.png"></a></li>
+   <li><a href="hunter"><img class="featured-logo" src="images/magazines/hunter.png"></a></li>
+   <li><a href="https://www.notjustalabel.com/acien" target="_blank"><img class="featured-logo" src="images/magazines/not_just_a_label.png"></a></li>
+   <li><a href="https://www.sleek-mag.com/article/everything-you-need-to-know-about-the-csm-ba-graduate-show/#343139333535" target="_blank"><img class="featured-logo" src="images/magazines/sleek.png"></a></li>
+   <li><a href="https://1granary.com/designers-3/graduate-shows/csm-ba-fashion-2023-sensibility-spirituality-and-wholesomeness-2/" target="_blank"><img class="featured-logo" src="images/magazines/1granary.png"></a></li>
+   <li><a href="https://www.murphysmagazine.com/designer/silvia-acien" target="_blank"><img class="featured-logo" src="images/magazines/muprhys.png"></a></li>
+   <li><p class="text-center gradient"><span>Awards:</span></p></li>
+   <li><img height="20" src="images/awards/lvmh.png"></li>
+   <li><img height="36" src="images/awards/framework_knitters.png" title="Framework Knitters"></li>`
+
 class Footer extends HTMLElement{
   connectedCallback(){ 
     this.innerHTML = `
     <div class="marquee marquee--hover-pause">
-    <ul class="marquee__content">
-   <li><p class="text-center gradient"><span>Featured in:</span></p></li>
-    <li><a href="https://www.wsj.com/style/fashion/young-fashion-designers-5e84f3fb?st=9yrj08edlgvm8rw" target="_blank"><img  height="35" src="images/magazines/wsj-logo-alt.svg"></a></li>
-    <li><a href="https://talkingtextilesmag.com/silvia-acien" target="_blank"><img  height="35" src="images/magazines/talking_textiles.png"></a></li>
-     <li><a href="office"><img class="featured-logo" src="images/magazines/office.png"></a></li>
-       <li><a href="fguk"><img class="featured-logo" src="images/magazines/fguk.png"></a></li>
-       <li><a href="sicky"><img class="featured-logo" src="images/magazines/sicky.png"></a></li>
-       <li><a href="malvie"><img class="featured-logo" src="images/magazines/malvie.png"></a></li>
-       <li><a href="hunter"><img class="featured-logo" src="images/magazines/hunter.png"></a></li>
-       <li><a href="https://www.notjustalabel.com/acien" target="_blank"><img class="featured-logo" src="images/magazines/not_just_a_label.png"></a></li>
-       <li><a href="https://www.sleek-mag.com/article/everything-you-need-to-know-about-the-csm-ba-graduate-show/#343139333535" target="_blank"><img class="featured-logo" src="images/magazines/sleek.png"></a></li>
-       <li><a href="https://1granary.com/designers-3/graduate-shows/csm-ba-fashion-2023-sensibility-spirituality-and-wholesomeness-2/" target="_blank"><img class="featured-logo" src="images/magazines/1granary.png"></a></li>
-       <li><a href="https://www.murphysmagazine.com/designer/silvia-acien" target="_blank"><img class="featured-logo" src="images/magazines/muprhys.png"></a></li>
-       <li><p class="text-center gradient"><span>Awards:</span></p></li>
-       <li><img height="20" src="images/awards/lvmh.png"></li>
-       <li><img height="36" src="images/awards/framework_knitters.png" title="Framework Knitters"></li>
+    <ul class="marquee__content">` + marqueeContent + `
     </ul>
-    <ul aria-hidden="true" class="marquee__content">
-   <li><p class="text-center gradient"><span>Featured in:</span></p></li>
-   <li><a href="https://www.wsj.com/style/fashion/young-fashion-designers-5e84f3fb?st=9yrj08edlgvm8rw" target="_blank"><img  height="35" src="images/magazines/wsj-logo-alt.svg"></a></li>
-   <li><a href="https://talkingtextilesmag.com/silvia-acien" target="_blank"><img  height="35" src="images/magazines/talking_textiles.png"></a></li>  
-   <li><a href="office"><img class="featured-logo" src="images/magazines/office.png"></a></li>
-     <li><a href="fguk"><img class="featured-logo" src="images/magazines/fguk.png"></a></li>
-     <li><a href="sicky"><img class="featured-logo" src="images/magazines/sicky.png"></a></li>
-     <li><a href="malvie"><img class="featured-logo" src="images/magazines/malvie.png"></a></li>
-       <li><a href="hunter"><img class="featured-logo" src="images/magazines/hunter.png"></a></li>
-       <li><a href="https://www.notjustalabel.com/acien" target="_blank"><img class="featured-logo" src="images/magazines/not_just_a_label.png"></a></li>
-       <li><a href="https://www.sleek-mag.com/article/everything-you-need-to-know-about-the-csm-ba-graduate-show/#343139333535" target="_blank"><img class="featured-logo" src="images/magazines/sleek.png"></a></li>
-       <li><a href="https://1granary.com/designers-3/graduate-shows/csm-ba-fashion-2023-sensibility-spirituality-and-wholesomeness-2/" target="_blank"><img class="featured-logo" src="images/magazines/1granary.png"></a></li>
-       <li><a href="https://www.murphysmagazine.com/designer/silvia-acien" target="_blank"><img class="featured-logo" src="images/magazines/muprhys.png"></a></li>
-   <li><p class="text-center gradient"><span>Awards:</span></p></li>
-   <li><img height="20" src="images/awards/lvmh.png"></li>
-   <li><img height="36" src="images/awards/framework_knitters.png" title="Framework Knitters"></li>
-   </ul>
+    <ul aria-hidden="true" class="marquee__content">` + marqueeContent +`
+    </ul>
    </div>
     <footer class="text-center text-white white-bg-1" id=#footer>
   <!-- Grid container -->
