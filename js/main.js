@@ -190,6 +190,8 @@ class Navbar extends HTMLElement{
 }
 
 marqueeContent = `<li><p class="text-center gradient"><span>Featured in:</span></p></li>
+<li><a href="https://www.vanityfair.it/article/its-contest-2023-finalisti" target="_blank"><img  height="35" src="images/magazines/vanity_fair.ico"></a></li>
+<li><a href="https://design-milk.com/ddw23-new-order-of-fashion-is-empowering-regenerative-design/#:~:text=Regenerative%20Folklore" target="_blank"><img  height="35" src="images/magazines/design-milk-logo-website.svg"></a></li>
 <li><a href="https://www.neworderoffashion.com/talents/talent-talks-silvia-acien-parrilla" target="_blank"><img  height="35" src="images/magazines/New+order+of+Fashion+Icon.png"></a></li>
 <li><a href="https://www.wsj.com/style/fashion/young-fashion-designers-5e84f3fb" target="_blank"><img  height="35" src="images/magazines/wsj-logo-alt.svg"></a></li>
 <li><a href="https://talkingtextilesmag.com/silvia-acien" target="_blank"><img  height="35" src="images/magazines/talking_textiles.png"></a></li>
