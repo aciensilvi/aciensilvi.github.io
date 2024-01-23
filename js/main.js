@@ -165,6 +165,62 @@ class Navbar extends HTMLElement{
   </ul>
 </div>
 </nav>
+<div id="cookieBanner" class="alert alert-light fade show fixed-bottom py-2 text-center" role="alert">
+  This website uses cookies. By continuing to use this site, you accept our use of cookies.
+  <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal" data-bs-target="#cookiesInfo">
+  Learn more
+  </button>
+  <button type="button" class="btn btn-dark btn-sm" id="confirmButton">Confirm</button>
+  </div>
+  <div class="modal fade" id="cookiesInfo" tabindex="-1" aria-labelledby="exampleModalCenteredScrollableTitle" style="display: none;" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="exampleModalCenteredScrollableTitle">Cookies information</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <h2>Cookie Notice of ACIEN</h2>
+      <p>Welcome to the Cookie Notice of ACIEN. This notice outlines how
+      ACIEN utilises cookies and other digital technologies on the
+      acien.es website (referred to as the "Site").</p>
+      <h2>What are Cookies?</h2>
+      <p>Cookies are small, temporary text files that we transfer to your
+      device to collect information from it.</p>
+      <h2>Why does ACIEN use Cookies?</h2>
+      <p>ACIEN uses Cookies on the Site to operate it, measure website
+      audience, provide social media functionality, and enable advertising
+      and advertising targeting. The following categories of Cookies are
+      employed:</p>
+      <ul>
+      <li>Strictly Necessary: Essential for the website's functionality,
+      these cookies cannot be switched off and are used in
+      response to your service requests.</li>
+      <li>Functional: Enable enhanced website functionality and
+      personalisation, provided by us or third-party providers.</li>
+      <li>Analytical or Performance: Allow us to measure and improve
+      the Site's performance by counting visits and analysing traffic
+      sources.</li>
+      </ul>
+      <h2>What Cookies does ACIEN use?</h2>
+      <p>The table below lists common First and Third-party Cookies used
+      on the Site:</p>
+      <ul>
+      <li>HTML5 Local Storage: Similar to cookies, used for
+      identification purposes.</li>
+      <li>Google Analytics: Utilised with explicit consent for website
+      analysis and optimisation. IP anonymisation is employed.</li>
+      </ul>
+      <h2>Contacting us</h2>
+      <p>For questions regarding this policy or the Site's practices, feel free
+      to contact ACIEN via email at <a href="mailto:info@acien.es">info@acien.es</a>.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-dark" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
     `
     // Add a current class to the menu item you are on 
     document.querySelectorAll('a.nav-link').forEach(el => {
@@ -217,9 +273,49 @@ class Footer extends HTMLElement{
     <ul aria-hidden="true" class="marquee__content">` + marqueeContent +`
     </ul>
    </div>
-    <footer class="text-center text-white white-bg-1" id=#footer>
+    <footer class="text-center white-bg-1" id="footer">
   <!-- Grid container -->
-  <div class="container pt-2">
+  <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdmSPNTq6XYHxonYqrtrrat1bUbHeeXIf_QGIxkYqNY2T1vdg/formResponse" method="POST" target="_blank">
+  <div class="container">
+  <div class="row justify-content-center gap-2 g-2">
+  <div class="col-12">
+  <label><h2>SIGN UP TO ACIEN NEWSLETTER:</h2></label></div>
+  <div class="col-md-2">
+    <input
+      class="form-control"
+      placeholder="First Name"
+      aria-label="Search"
+      type="text"
+      id="name"
+      name="entry.1621704042"
+    /></div>
+    <div class="col-md-2">
+    <input
+      class="form-control"
+      placeholder="Last Name"
+      aria-label="Search"
+      type="text"
+      id="surname"
+      name="entry.77329585"
+    /></div>
+    <div class="col-md-4">
+    <input
+    type="email"
+      class="form-control"
+      placeholder="Email Address"
+      aria-label="Search"
+      id="email"
+      name="entry.795430899"
+      required
+    /></div>
+    <div class="col-md-2 d-grid text-start">
+    <button class="btn btn-dark btn-sm" type="submit" name="submit" value="Submit">
+      Sign Up
+    </button>
+    </div>
+    </div>
+    </div>
+    </form>
     <!-- Section: Social media -->
       <!-- Mail -->
       <a href="mailto:info@acien.es"><i class="btn fa-solid fa-envelope fa-lg footerIcon"></i></a>
@@ -231,7 +327,7 @@ class Footer extends HTMLElement{
       <a href="https://www.linkedin.com/in/silvia-acien-parrilla-3a0296216" target="blank"><i class="btn fa-brands fa-linkedin fa-lg footerIcon"></i></a>
     <!-- Section: Social media -->
   </div>
-  <a class="d-none d-sm-block position-absolute start-0 lad8s" href="https://lad8s.com" target="_blank">
+  <a class="d-none d-md-block position-absolute start-0 lad8s" href="https://lad8s.com" target="_blank">
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img height="24" src="images/lad8s_logo.png"> developed</a>
 </footer>
     `
@@ -327,3 +423,19 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
 gtag('config', 'G-0M4GEK1QY7');
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Check if the user has already confirmed
+  if (localStorage.getItem('cookieBannerConfirmed')) {
+      // Hide the banner if the user has confirmed
+      document.getElementById('cookieBanner').style.display = 'none';
+  }
+
+  // Add event listener to the Confirm button
+  document.getElementById('confirmButton').addEventListener('click', function() {
+      // Set a flag in local storage to indicate that the user has confirmed
+      localStorage.setItem('cookieBannerConfirmed', 'true');
+      // Hide the banner
+      document.getElementById('cookieBanner').style.display = 'none';
+  });
+});

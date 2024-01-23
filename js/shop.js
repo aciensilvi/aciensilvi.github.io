@@ -75,7 +75,7 @@ for (let item of shopItemList) {
 </div>
 <br>
 <div class="d-grid gap-2 col-6 mx-auto">
-<a class="button btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSetxYHsEcbEOhDrCb9IFHJFHMfxW3l8WFBmWAfnbQ0ki7kifw/viewform?usp=sf_link" target="_blank">Buy</a>
+<a class="button btn btn-dark" href="https://docs.google.com/forms/d/e/1FAIpQLSetxYHsEcbEOhDrCb9IFHJFHMfxW3l8WFBmWAfnbQ0ki7kifw/viewform?usp=sf_link" target="_blank">Buy</a>
 </div>
 </div>
   `
@@ -232,7 +232,7 @@ let shopPage = '';
               <option value="2">Without straps</option>
               <option value="3">Made to order</option>
             </select>
-            <a id="buyButton" class="button btn btn-primary" href="`+ ourItem.link1 +`" target="_blank">Buy</a>
+            <a id="buyButton" class="button btn btn-dark" href="`+ ourItem.link1 +`" target="_blank">Buy</a>
           </div>
           <div class="col text-center text-justfy my-auto" id="priceContainer">
             <h2 id="price">`+ ourItem.price1 +`</h2>
