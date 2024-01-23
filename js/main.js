@@ -340,14 +340,14 @@ class CommonHead extends HTMLElement{
     var pageTitleHead;
     // If page is one of these, then do a different formatting
       if (['fguk', 'hunter', 'malvie', 'office','sicky'].indexOf(page) >= 0) {
-      pageTitleHead = "Acien x " + page.toUpperCase() ;
+      pageTitleHead = "ACIEN x " + page.toUpperCase() ;
     } else if (['index',''].indexOf(page) >= 0) {
-      pageTitleHead = "Acien"
+      pageTitleHead = "ACIEN"
     } else if (['maison_0_x_lvmh'].indexOf(page) >= 0) {
-      pageTitleHead = "Maison/0 x LVMH - Acien"
+      pageTitleHead = "Maison/0 x LVMH - ACIEN"
     } else {
-      //Capitalise first letter and add '- Acien'
-      pageTitleHead = (page.charAt(0).toUpperCase() + page.slice(1) + " - Acien").replace(/_/g, ' ');
+      //Capitalise first letter and add '- ACIEN'
+      pageTitleHead = (page.charAt(0).toUpperCase() + page.slice(1) + " - ACIEN").replace(/_/g, ' ');
     } 
     document.head.innerHTML = document.head.innerHTML + `<title>` + pageTitleHead + `</title>`;
     document.head.innerHTML = document.head.innerHTML + `
