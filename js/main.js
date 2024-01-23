@@ -353,7 +353,6 @@ class CommonHead extends HTMLElement{
     document.head.innerHTML = document.head.innerHTML + `
     <link rel="icon" type="image/x-icon" href="favicon.ico">
   <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <meta name="viewport" content="width=device-width, initial-scale=1">
     `;
 
@@ -370,8 +369,6 @@ class CommonHead extends HTMLElement{
     function includeBootstrapJS(file) {
       var script = document.createElement('script');
       script.src = file;
-      script.integrity = "sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p";
-      script.setAttribute("crossorigin","anonymous");
   
       document.getElementsByTagName('head').item(0).appendChild(script);
       }
@@ -400,14 +397,12 @@ class CommonHead extends HTMLElement{
       fileref.setAttribute("rel", "stylesheet")
       fileref.setAttribute("type", "text/css")
       fileref.setAttribute("href", filename)
-      fileref.setAttribute("crossorigin", "anonymous")
-      fileref.setAttribute("integrity","sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3")
 
       document.getElementsByTagName("head").item(0).appendChild(fileref)
     }
     includeFA('https://kit.fontawesome.com/581d00b336.js');
-    includeBootstrapJS("https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js");
-    includeBootsrapCSS("https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css");
+    includeBootstrapJS("js/bootstrap/bootstrap.bundle.min.js");
+    includeBootsrapCSS("css/bootstrap/bootstrap.min.css");
     includeMain("css/main.css");
     includeGoogleTag("https://www.googletagmanager.com/gtag/js?id=G-0M4GEK1QY7");
   }
