@@ -167,9 +167,9 @@ class Navbar extends HTMLElement{
 </nav>
 <div id="cookieBanner" class="alert alert-light fade show fixed-bottom py-2 text-center" role="alert">
   This website uses cookies. By continuing to use this site, you accept our use of cookies.
-  <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal" data-bs-target="#cookiesInfo">
+  <a type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal" data-bs-target="#cookiesInfo">
   Learn more
-  </button>
+  </a>
   <button type="button" class="btn btn-dark btn-sm" id="confirmButton">Confirm</button>
   </div>
   <div class="modal fade" id="cookiesInfo" tabindex="-1" aria-labelledby="exampleModalCenteredScrollableTitle" style="display: none;" aria-hidden="true">
