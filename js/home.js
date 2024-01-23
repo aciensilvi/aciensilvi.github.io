@@ -8,7 +8,6 @@ function loadVideo() {
   video.autoplay = true;
   video.loop = true;
   video.muted = true;
-  video.loading = 'lazy';
   video.setAttribute('playsinline','');
   video.setAttribute('muted','');
   video.setAttribute('preload','none');
