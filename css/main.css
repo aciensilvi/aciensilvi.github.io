@@ -50,11 +50,16 @@
     z-index: 1000;
   }
   footer{
-    color: black;
+    background-image: url(../images/revival/footer_hat.webp)!important;
+    background-size: 70%!important;
+    color: white;
     font-family: Century Gothic;
     position: sticky;
     top: 100%;
     font-size:26;
+  }
+  footer h2 {
+    font-weight:900;
   }
   .footerIcon{
        font-size: 38px;
@@ -637,4 +642,19 @@ p.gradient span {
 h3.gradient span {
   font-size: 42px;
 }
+footer{
+  background-size: 100%!important;
+}
+}
+/* For md */
+@media (max-width:767.98px) {
+  footer{
+    background-size: 150%!important;
+  }
+}
+/* For sm */
+@media (max-width:575.98px) {
+  footer{
+    background-size: 200%!important;
+  }
 }
