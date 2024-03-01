@@ -1,19 +1,3 @@
-// Video
-function loadVideo() {
-  var video = document.createElement('video');
-  video.id = 'video';
-  video.src = 'documents/homepage.mp4';
-  video.classList= 'video-style';
-  video.playsinline = true;
-  video.autoplay = true;
-  video.loop = true;
-  video.muted = true;
-  video.setAttribute('playsinline','');
-  video.setAttribute('muted','');
-  video.setAttribute('preload','none');
-  video.setAttribute('poster','images/white.png');
-  document.getElementById('video').appendChild(video);
-}
 // Animate homepage logo
 const animateCSS = (element, animation, prefix = 'animate__') =>
 // We create a Promise and return it
@@ -53,17 +37,6 @@ switch(Math.floor(Math.random() * 5)) {
   case 4 : animateCSS('.homepageLogo', 'tada'); break;
 }
 }
-
-// Hide the logo in the menu if logo is seen on the page
-document.querySelector("nav a").style.visibility = "hidden";
-window.addEventListener("scroll", function() {
-  var elementTarget = document.getElementById("homepageLogo");
-  if (window.scrollY < (elementTarget.offsetTop + elementTarget.offsetHeight)) {
-      document.querySelector("nav a").style.visibility = "hidden";
-  } else {
-    document.querySelector("nav a").style.visibility = "visible";
-  }
-});
 
 // Scroll to shop section javascript
 document.addEventListener("DOMContentLoaded", function () {

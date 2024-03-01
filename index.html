@@ -6,12 +6,23 @@
 </head>
 <body>
 <app-navbar></app-navbar>
-<header class="video-header">
-<div id="video"></div>
-<div class="viewport-header">
-<img class="homepageLogo" id="homepageLogo" title="acien" alt="Acien Logo" src="images/logo_homepage.png">
-</div>
-</header>
+<section class="container-fluid homepage justify-content-center" data-cue="fadeIn" data-show="true" style="animation-name: fadeIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
+  <div class="row margin justify-content-center">
+     <div class="col-xl-8 col-lg-10 col-12" data-cues="zoomIn" data-group="page-title" data-delay="700" data-disabled="true">
+        <div class="text-center d-flex flex-column" data-cue="zoomIn" data-group="page-title" data-delay="700" data-show="true" style="animation-name: zoomIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 700ms; animation-direction: normal; animation-fill-mode: both;">
+           <div class="d-flex justify-content-center">
+            <img class="homepageLogo" id="homepageLogo" title="acien" alt="Acien" src="images/logo_text.png">
+           </div>
+           <div class="d-flex flex-column">
+              <br>
+              <h2 class="display-5 homepageHeading">Regenerative fashion engaging with biodiversity conservation</h2>
+              <br>
+              <p class="lead">Our pieces are crafted from fibres cultivated through regenerative principles, harmonising with local ecosystems. We prioritise preserving ancestral techniques while embracing innovation through scientific development.</p>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>
 <a class="scroller" href="#shopSection"><span></span></a>
 <main id="shopSection">
   <br><br>

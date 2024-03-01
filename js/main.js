@@ -99,7 +99,7 @@ class Navbar extends HTMLElement{
 <!-- Button to close the overlay navigation -->
 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 <!-- Overlay content -->
-<div class="overlay-content">
+<div class="overlay-content justify-content-center">
 <a href="/">Home</a>
 <a href="shop">Shop</a>
 <a onclick="openNav2()" href="#">Collections</a>
