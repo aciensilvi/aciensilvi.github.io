@@ -90,7 +90,7 @@ class Navbar extends HTMLElement{
     this.innerHTML = `
     <nav class="navbar navbar-expand-lg py-4 sticky-top white-bg-1">
   <a class="navbar-brand" href="/"><img src="images/logo.png" style="max-height:70px;"></a>
-  <p class="d-lg-none mx-auto page-name">`
+  <p class="d-lg-none mx-auto page-name my-auto">`
   + pageTitle +
   `</p>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -125,6 +125,7 @@ class Navbar extends HTMLElement{
 </div>
 <a href="contact">Contact</a>
 <a href="about">About</a>
+<a href="regeneration">Regeneration</a>
 <a href="services">Services</a>
 </div>
 </div>
@@ -160,6 +161,9 @@ class Navbar extends HTMLElement{
       </li>
       <li class="nav-item">
           <a class="nav-link" href="about">About</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="regeneration">Regenereration</a>
       </li>
       <li class="nav-item">
       <a class="nav-link" href="services">Services</a>

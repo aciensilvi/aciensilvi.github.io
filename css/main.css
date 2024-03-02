@@ -4,7 +4,6 @@
   src: url(../fonts/GOTHIC.TTF);
 }
   html, body {
-    /* background-color: white; */
     background: rgb(227,255,201);
     background: linear-gradient(0deg, rgba(227,255,201,1) 0%, rgba(255,255,255,1) 100%);
              -webkit-background-size: cover;
@@ -14,7 +13,6 @@
     width: 100%;
     margin: 0;
     padding: 0;
-    /* overflow: hidden; */
   }
 
   .homepage {
@@ -27,15 +25,38 @@
     background-position: top center;
     color: white;
   }
+  
+  a.homepageLink {
+    color: white;
+  }
+
+  .regenerationHeading {
+    min-height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/menigilda/5.jpg)!important;
+    background-size: cover;
+    background-position: 0px -400px;
+    color: white;
+  }
 
   .margin {
     margin-left: 10px;
     margin-right: 10px;
+}  
+.moreMargin {
+  margin-left: 10vw;
+  margin-right: 10vw;
 }
 
-  .homepageHeading {
-    font-weight: bold;
-  }
+.regImg {
+  margin-right: 89px;
+}
+
+.homepageHeading {
+  font-weight: bold;
+}
 
   .nav-link{
     font-family: Century Gothic;
@@ -189,10 +210,6 @@ text-shadow:
   }
   .white-bg-1 {
     background: rgba(116, 0, 220, 0.1);
-  }
-  @font-face {
-    font-family: Segun;
-    src: url(../fonts/Segun-Regular.ttf);
   }
   h1,h2,h3{
     font-family: Segun;
@@ -633,16 +650,25 @@ h3.gradient span {
 footer{
   background-size: 100%!important;
 }
+.regenerationHeading {
+  background-position: 0 -300px;
+}
 }
 /* For md */
 @media (max-width:767.98px) {
   footer{
     background-size: 150%!important;
   }
+  .regenerationHeading {
+    background-position: center;
+}
 }
 /* For sm */
 @media (max-width:575.98px) {
   footer{
     background-size: 200%!important;
+  }
+  .lead{
+    font-size: 0.9rem;
   }
 }
