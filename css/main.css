@@ -83,10 +83,6 @@
     font-family: Segun;
     src: url(../fonts/Segun-Regular.ttf);
   }
-  @font-face {
-    font-family: Primen;
-    src: url(../fonts/Primen-Regular.otf);
-  }
   .fixed-bottom {
     z-index: 1000;
   }
