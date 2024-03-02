@@ -146,7 +146,7 @@
       cursor: pointer;
   }
   a.projectLink:hover{color:black}
-  p, li {
+  p, li, .liNormal {
     font-family: Century Gothic;
     font-size: 20px;
   }
