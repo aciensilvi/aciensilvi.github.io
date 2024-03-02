@@ -146,7 +146,7 @@
       cursor: pointer;
   }
   a.projectLink:hover{color:black}
-  p, li, .liNormal {
+  p, li {
     font-family: Century Gothic;
     font-size: 20px;
   }
@@ -581,7 +581,7 @@ p.gradient span {
   font-family: Century Gothic;
 }
 
-.modal-content p, li {
+.modal-content p, .modal-content li {
   font-size: 14;
 }
 .modal-content h2 {
