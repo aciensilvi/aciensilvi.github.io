@@ -163,7 +163,7 @@ class Navbar extends HTMLElement{
           <a class="nav-link" href="about">About</a>
       </li>
       <li class="nav-item">
-      <a class="nav-link" href="regeneration">Regenereration</a>
+      <a class="nav-link" href="regeneration">Regeneration</a>
       </li>
       <li class="nav-item">
       <a class="nav-link" href="services">Services</a>
