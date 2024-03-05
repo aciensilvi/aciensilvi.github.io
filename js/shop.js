@@ -133,6 +133,15 @@ let shopPage = '';
       }
     
       this.innerHTML = `<div class="container-fluid">
+      <div class="row text-center  ">
+      <div class="col">
+      <h3 class="gradient"><span>DISCOVER OUR CAPSULE COLLECTION</span
+      </h3>
+      <p>Hand crafted accessories with regeneration in mind at every stage
+      </p>
+      <br>
+      </div>
+      </div>
       <div class="row justify-content-md-center">`
       + shopPage +
       `</div>

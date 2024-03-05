@@ -21,7 +21,6 @@ document.onreadystatechange = function() {
       document.querySelector("body").style.visibility = "visible";
       document.querySelector("#loaderForSite").style.visibility = "hidden";
       document.getElementById("loaderForSite").remove();
-      if (homepage.indexOf(page) >= 0) {loadVideo();}
   }
 };
 // Load scripts from other js files
