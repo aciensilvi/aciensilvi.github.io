@@ -66,14 +66,24 @@ if (projects.indexOf(page) >= 0) {
   function openNav2() {
     document.getElementById("myNav2").style.width = "100%";
   }
+  function openNav3() {
+    document.getElementById("myNav3").style.width = "100%";
+  }
   /* Close when someone clicks on the "x" symbol inside the overlay 2 */
   function closeNav2() {
     document.getElementById("myNav2").style.width = "0%";
     document.getElementById("myNav").style.width = "0%";
   }
+  function closeNav3() {
+    document.getElementById("myNav3").style.width = "0%";
+    document.getElementById("myNav").style.width = "0%";
+  }
   /* Go back to menu 1*/
   function backToNav() {
     document.getElementById("myNav2").style.width = "0%";
+  }
+  function backToNav2() {
+    document.getElementById("myNav3").style.width = "0%";
   }
 
 // Change the title of the page
@@ -123,8 +133,16 @@ class Navbar extends HTMLElement{
   </div>
 </div>
 <a href="contact">Contact</a>
-<a href="about">About</a>
-<a href="regeneration">Regeneration</a>
+<a onclick="openNav3()" href="#">ACIEN's world</a>
+<div id="myNav3" class="overlay">
+  <a href="javascript:void(0)" class="backbtn" onclick="backToNav2()">&crarr;</a>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav3()">&times;</a>
+  <div class="overlay-content justify-content-center">
+    <a href="regeneration">Regeneration</a>
+    <a href="our_commitment">Our commitment</a>
+    <a href="about">About</a>
+  </div>
+</div>
 <a href="services">Services</a>
 </div>
 </div>
@@ -158,11 +176,13 @@ class Navbar extends HTMLElement{
       <li class="nav-item">
           <a class="nav-link" href="contact">Contact</a>
       </li>
-      <li class="nav-item">
-          <a class="nav-link" href="about">About</a>
-      </li>
-      <li class="nav-item">
-      <a class="nav-link" href="regeneration">Regeneration</a>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button">ACIEN's world</a>
+          <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="regeneration">Regeneration</a></li>
+          <li><a class="dropdown-item" href="our_commitment">Our commitment</a></li>
+          <li><a class="dropdown-item" href="about">About</a></li>
+          </ul>
       </li>
       <li class="nav-item">
       <a class="nav-link" href="services">Services</a>
