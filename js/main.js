@@ -155,7 +155,7 @@ class Navbar extends HTMLElement{
         <a class="nav-link" href="shop">Shop</a>
     </li>
       <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button">Collections</a>
+          <a class="nav-link dropdown-toggle" role="button">Collections</a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="revival">Revival / 2024</a></li>
             <li><a class="dropdown-item" href="regenerative_folklore">Regenerative Folklore / 2023</a></li>
@@ -177,7 +177,7 @@ class Navbar extends HTMLElement{
           <a class="nav-link" href="contact">Contact</a>
       </li>
       <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button">ACIEN's world</a>
+          <a class="nav-link dropdown-toggle" role="button">ACIEN's world</a>
           <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="regeneration">Regeneration</a></li>
           <li><a class="dropdown-item" href="our_commitment">Our commitment</a></li>

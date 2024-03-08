@@ -590,6 +590,10 @@ p.gradient span {
   font-family: Century Gothic;
 }
 
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 .modal-content p, h2 ,h3 {
   font-family: Century Gothic;
 }
