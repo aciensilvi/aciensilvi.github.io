@@ -43,14 +43,14 @@ const magazines = ['regenerative_folklore', 'fguk', 'hunter', 'malvie', 'office'
 const homepage = ['','index'];
 const shop = ['','index','shop','tabernas_hat','carnation_hat','shop_item']
 if (projects.indexOf(page) >= 0) {
-  loadScript('./js/project.js');
+  loadScript('./js/project.min.js');
 } else if (magazines.indexOf(page) >= 0) {
-  loadScript('./js/magazine.js');
+  loadScript('./js/magazine.min.js');
 } else if (homepage.indexOf(page) >= 0) {
-  loadScript('./js/home.js');
-  loadScript('./js/shop.js');
+  loadScript('./js/home.min.js');
+  loadScript('./js/shop.min.js');
 } else if (shop.indexOf(page) >= 0) {
-  loadScript('./js/shop.js');
+  loadScript('./js/shop.min.js');
 }
 
 // Menu actions
