@@ -133,14 +133,14 @@ class Navbar extends HTMLElement{
   </div>
 </div>
 <a href="contact">Contact</a>
-<a onclick="openNav3()" href="#">ACIEN's world</a>
+<a onclick="openNav3()" href="#">ACIEN's realm</a>
 <div id="myNav3" class="overlay">
   <a href="javascript:void(0)" class="backbtn" onclick="backToNav2()">&crarr;</a>
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav3()">&times;</a>
   <div class="overlay-content justify-content-center">
     <a href="regeneration">Regeneration</a>
     <a href="our_commitment">Our commitment</a>
-    <a href="about">About</a>
+    <a href="founder">Founder</a>
   </div>
 </div>
 <a href="services">Services</a>
@@ -177,11 +177,11 @@ class Navbar extends HTMLElement{
           <a class="nav-link" href="contact">Contact</a>
       </li>
       <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" role="button">ACIEN's world</a>
+          <a class="nav-link dropdown-toggle" role="button">ACIEN's realm</a>
           <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="regeneration">Regeneration</a></li>
           <li><a class="dropdown-item" href="our_commitment">Our commitment</a></li>
-          <li><a class="dropdown-item" href="about">About</a></li>
+          <li><a class="dropdown-item" href="founder">Founder</a></li>
           </ul>
       </li>
       <li class="nav-item">
@@ -428,7 +428,7 @@ class CommonHead extends HTMLElement{
     includeFA('https://kit.fontawesome.com/581d00b336.js');
     includeBootstrapJS("js/bootstrap/bootstrap.bundle.min.js");
     includeBootsrapCSS("css/bootstrap/bootstrap.min.css");
-    includeMain("css/main.css");
+    includeMain("css/main.min.css");
     includeGoogleTag("https://www.googletagmanager.com/gtag/js?id=G-0M4GEK1QY7");
   }
 }
