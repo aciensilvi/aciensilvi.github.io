@@ -1,28 +1,19 @@
 class shopItem {
-  constructor(title,amount,short_description,link1,link2,linkCustom,price1,price2) {
+  constructor(title,amount,short_description,link1,price1) {
     this.title = title;
     this.amount = amount;
     this.short_description = short_description;
     this.link1 = link1;
-    this.link2 = link2;
-    this.linkCustom = linkCustom;
     this.price1 = price1;
-    this.price2 = price2;
     this.linkToItem = title.toLowerCase().replace(" ","_");
   }
 }
 tabernas = new shopItem("TABERNAS HAT",4,"Regenerative materials",
-"https://buy.stripe.com/28o15M0OnabT1ag28f",
-"https://buy.stripe.com/6oE7ua0Onfwd6uAfZ4",
-"https://docs.google.com/forms/d/e/1FAIpQLSfwUTVYOcDEiWB0dPzPrBpUZsiKROyBnfFhusImUwh3b8a5lg/viewform",
-"\u00A3900",
-"\u00A3850");
+"https://buy.stripe.com/7sI9Ci7cLbfX4ms7sD",
+"\u00A32459");
 carnation = new shopItem("CARNATION HAT",3,"Regenerative materials",
-"https://buy.stripe.com/fZeg0GeFdgAhaKQ4gp",
-"https://buy.stripe.com/14keWCdB9ck13io8wE",
-"https://docs.google.com/forms/d/e/1FAIpQLScnJelnosuK6A9Ne4EBDuaI-nxqRQHXSXjw_uta9oCxXcT0zg/viewform",
-"\u00A3950",
-"\u00A3900");
+"https://buy.stripe.com/aEU7ua7cLabT5qw6oA",
+"\u00A32500");
 const shopItemList = [tabernas,carnation];
 
 
@@ -124,7 +115,7 @@ let shopPage = '';
             </button>
           </div>
           <h2 class="shop-title">`+ eachShopItem.title +`</h2>
-          <h5 id="price">` + eachShopItem.price2 + `<h5>
+          <h5 id="price">` + eachShopItem.price1 + `<h5>
       
           <div class="d-grid gap-2 col-6 mx-auto"><p>`+ eachShopItem.short_description +`</p></a>
             </div>
@@ -235,12 +226,7 @@ let shopPage = '';
           <h2 class="shop-title d-none d-lg-block">`+ ourItem.title +`</h2>
           <description>`+ description.innerHTML +`<description>
           <div class="row">
-          <div class="d-grid gap-2 col-6 mx-auto">
-            <select class="form-select" id="selectOption" aria-label="Select option">
-              <option value="1" selected>With straps</option>
-              <option value="2">Without straps</option>
-              <option value="3">Made to order</option>
-            </select>
+          <div class="d-grid gap-2 col-6 mx-auto my-auto">
             <a id="buyButton" class="button btn btn-dark" href="`+ ourItem.link1 +`" target="_blank">Buy</a>
           </div>
           <div class="col text-center text-justfy my-auto" id="priceContainer">
@@ -278,42 +264,6 @@ let shopPage = '';
         s.parentNode.insertBefore(script, s);
         }
         includeFSlightbox("js/fslightbox.js");
-
-    // Get references to the select element, price elements, and the buy button
-    const selectOption = document.getElementById("selectOption");
-    const priceElement = document.getElementById("price");
-    const priceContainer = document.getElementById("priceContainer");
-    const buyButton = document.getElementById("buyButton");
-
-    // Define the price values and links for each option
-    const options = {
-      1: { price: ourItem.price1, link: ourItem.link1 },
-      2: { price: ourItem.price2, link: ourItem.link2 },
-      3: { price: "Custom Price", link: ourItem.linkCustom },
-    };
-
-    // Function to update the price, link, and show/hide the container when an option is selected
-    selectOption.addEventListener("change", function() {
-      const selectedOption = selectOption.value;
-      if (selectedOption === "3") {
-        // If "Custom" is selected, hide the price container and update the link
-        priceContainer.style.display = "none";
-        buyButton.href = options[selectedOption].link;
-      } else {
-        // Otherwise, show the price container, update the price, and link
-        priceElement.textContent = options[selectedOption].price;
-        priceContainer.style.display = "block";
-        buyButton.href = options[selectedOption].link;
-      }
-    });
-
-    // Initialize the price and link when the page loads
-    window.addEventListener("load", function() {
-      const selectedOption = selectOption.value;
-      priceElement.textContent = options[selectedOption].price;
-      buyButton.href = options[selectedOption].link;
-    });
-
     }
   }
 
