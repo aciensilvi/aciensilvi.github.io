@@ -137,18 +137,6 @@ let shopPage = '';
       + shopPage +
       `</div>
       </div>
-
-      <div class="container-fluid">
-<div class="row justify-content-md-center">
-    <div class="col-md-6 text-center">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdl7ZdqLxmv6705tFo69L8AK_GY3TV3BOQDTR9dB6t7al2VMg/viewform" target="_blank" class="shop-title">
-    <img class="pic_w50" src="images/shop/made_to_order.jpeg">
-    <h2 class="shop-title">MADE TO ORDER HAT</h2>
-    <p>Regenerative materials</p>
-        </a>
-</div>
-</div>
-</div>
       `
             // Add active class to the first item in the list
             document.querySelectorAll('.carousel-item').forEach(el => {
